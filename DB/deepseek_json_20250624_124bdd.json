@@ -1,0 +1,947 @@
+{
+  "users": [
+    {
+      "id": "e9c137d0-8259-4c1e-b97f-8eb33a0b33e5",
+      "username": "amirhosein",
+      "role": "user",
+      "password": "$2b$10$bpcz.GpFsv1FZ6QKKQgY.O.UHfYdcnd/AUdUZvLbtCKRLQr4oIyqi",
+      "phonenumber": "09364457844",
+      "fullname": "امیرحسین غلامی",
+      "email": "amirhosein@example.com",
+      "isBanned": false,
+      "purchasedCourses": []
+    },
+    {
+      "id": "83ba20c4-95bf-4559-be67-297af2df7631",
+      "username": "ali",
+      "role": "user",
+      "password": "$2b$10$0JOZrHLlza2Gb1RUa2IJw.5xR1BZpcVY2zy3MWaFUzu7E81T0KYo2",
+      "phonenumber": "09107654321",
+      "fullname": "علی رضایی",
+      "email": "ali@example.com",
+      "isBanned": false,
+      "purchasedCourses": []
+    },
+    {
+      "id": "7080dd13-8351-46aa-a938-8e4d756b0273",
+      "username": "hojjat",
+      "role": "user",
+      "password": "$2b$10$QRDS8MxEaS9U8SIyGn4u2..dqNTLRnb28ZY4ovzD.5sEyZIqti3Je",
+      "phonenumber": "09123456789",
+      "fullname": "حجت ترابی",
+      "email": "hojjat@example.com",
+      "isBanned": false,
+      "purchasedCourses": []
+    },
+    {
+      "id": "d142f596-eaf5-4cb9-9ab9-a064ddbc0551",
+      "username": "nazanin",
+      "role": "user",
+      "password": "$2b$10$939qlISBHWr/VaBNA.D7ZO2k0UkYoE/gzaKQaOaw1N4MFcT4ra2T2",
+      "phonenumber": "09369876543",
+      "fullname": "نازنین کریمی",
+      "email": "nazanin@example.com",
+      "isBanned": false,
+      "purchasedCourses": [
+        "c1",
+        "c2"
+      ]
+    },
+    {
+      "id": "ba876b9e-3864-4b88-b8fd-9f84cecf7312",
+      "username": "reza",
+      "role": "user",
+      "password": "$2b$10$e1XO49Rd9rod8DDF8UDmb.tesscDuIauZdlReniWq47SI9syUBc..",
+      "phonenumber": "09111234567",
+      "fullname": "رضا محمدی",
+      "email": "reza@example.com",
+      "isBanned": false,
+      "purchasedCourses": []
+    },
+    {
+      "id": "02cd0585-ff11-4f52-b09d-8aa291d5c479",
+      "username": "mostafa",
+      "role": "user",
+      "password": "$2b$10$SJXG1GR67JqDI./9HWuIYuvaYzi.qUP.WxS7Zy/wiI4WhucuQCyhq",
+      "phonenumber": "09351234567",
+      "fullname": "مصطفی احمدی",
+      "email": "mostafa@example.com",
+      "isBanned": false,
+      "purchasedCourses": []
+    },
+    {
+      "id": "0600e5b9-28c2-4d1c-8fe2-3f09d76b778e",
+      "username": "vahid",
+      "role": "user",
+      "password": "$2b$10$mNcS.u9EJaJfmqyHNPAcoOW3n9zHCIwL70l3KuWMwfTz1sFV8FgMa",
+      "phonenumber": "09129876543",
+      "fullname": "وحید مرادی",
+      "email": "vahid@example.com",
+      "isBanned": false,
+      "purchasedCourses": []
+    },
+    {
+      "id": "47c9a918-a046-42ec-bd66-f380c478e3b6",
+      "username": "sara",
+      "role": "user",
+      "password": "$2b$10$w7uJIqJF47AdJQQZtFRIAeMzxNWFjWp5A.y3Kr9Ec62P8V8VCSZrq",
+      "phonenumber": "09351234567",
+      "fullname": "سارا احمدی",
+      "email": "sara@example.com",
+      "isBanned": false,
+      "purchasedCourses": []
+    },
+    {
+      "id": "e8d15fb8-cf88-4f17-bc22-9d9a247a4224",
+      "username": "mohammad",
+      "role": "user",
+      "password": "$2b$10$mMbyeICz350piE9v4uOo0O83ufDj6uQDyFBApRfZL6in16pRwWMJe",
+      "phonenumber": "09111234567",
+      "fullname": "محمد حسینی",
+      "email": "mohammad@example.com",
+      "isBanned": false,
+      "purchasedCourses": []
+    },
+    {
+      "id": "1f5b75e6-5289-4911-9210-75303ca75598",
+      "username": "fatemeh",
+      "role": "user",
+      "password": "$2b$10$pGckdpQUgLAiHW5cwTSzYe7l4QSV2fPgAN6yhCPdheKL7tmVh3o8i",
+      "phonenumber": "09369876543",
+      "fullname": "فاطمه محمدی",
+      "email": "fatemeh@example.com",
+      "isBanned": false,
+      "purchasedCourses": []
+    }
+  ],
+  "courses": [
+    {
+      "id": "c1",
+      "title": "React JS",
+      "slug": "react-js",
+      "description": "دوره کامل React از مقدماتی تا پیشرفته",
+      "coverImage": "./images/courses/react-js.jpeg",
+      "teacherId": "u2",
+      "price": 2500000,
+      "duration": 30,
+      "studentsCount": 150,
+      "isActive": true,
+      "createdAt": "2025-02-01T10:00:00Z",
+      "sessions": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "id": "c2",
+      "title": "Node JS",
+      "slug": "node-js",
+      "description": "دوره جامع Node.js و Express",
+      "coverImage": "./images/courses/node-js.jpeg",
+      "teacherId": "u3",
+      "price": 3000000,
+      "duration": 40,
+      "studentsCount": 120,
+      "isActive": true,
+      "createdAt": "2025-02-05T11:00:00Z",
+      "sessions": [
+        "s5",
+        "s6",
+        "s7"
+      ]
+    },
+    {
+      "id": "c3",
+      "title": "Python Django",
+      "slug": "python-django",
+      "description": "دوره کامل توسعه وب با Django",
+      "coverImage": "./images/courses/python-django.jpeg",
+      "teacherId": "u4",
+      "price": 2800000,
+      "duration": 35,
+      "studentsCount": 100,
+      "isActive": true,
+      "createdAt": "2025-02-10T12:00:00Z",
+      "sessions": [
+        "s8",
+        "s9"
+      ]
+    },
+    {
+      "id": "c4",
+      "title": "Vue JS",
+      "slug": "vue-js",
+      "description": "دوره پیشرفته Vue.js",
+      "coverImage": "./images/courses/vue-js.jpeg",
+      "teacherId": "u5",
+      "price": 2200000,
+      "duration": 25,
+      "studentsCount": 90,
+      "isActive": true,
+      "createdAt": "2025-02-15T13:00:00Z",
+      "sessions": [
+        "s10",
+        "s11",
+        "s12"
+      ]
+    },
+    {
+      "id": "c5",
+      "title": "React Native",
+      "slug": "react-native",
+      "description": "دوره ساخت اپلیکیشن موبایل",
+      "coverImage": "./images/courses/react-native.jpeg",
+      "teacherId": "u6",
+      "price": 3500000,
+      "duration": 45,
+      "studentsCount": 80,
+      "isActive": true,
+      "createdAt": "2025-02-20T14:00:00Z",
+      "sessions": [
+        "s13",
+        "s14",
+        "s15"
+      ]
+    },
+    {
+      "id": "c6",
+      "title": "JavaScript پیشرفته",
+      "slug": "advanced-js",
+      "description": "آموزش مفاهیم پیشرفته جاوااسکریپت",
+      "coverImage": "./images/courses/advanced-js.jpeg",
+      "teacherId": "u2",
+      "price": 2000000,
+      "duration": 20,
+      "studentsCount": 200,
+      "isActive": true,
+      "createdAt": "2025-03-01T15:00:00Z",
+      "sessions": [
+        "s16",
+        "s17"
+      ]
+    },
+    {
+      "id": "c7",
+      "title": "TypeScript",
+      "slug": "typescript",
+      "description": "دوره کامل TypeScript",
+      "coverImage": "./images/courses/typescript.jpeg",
+      "teacherId": "u3",
+      "price": 1800000,
+      "duration": 18,
+      "studentsCount": 150,
+      "isActive": true,
+      "createdAt": "2025-03-05T16:00:00Z",
+      "sessions": [
+        "s18",
+        "s19",
+        "s20"
+      ]
+    },
+    {
+      "id": "c8",
+      "title": "MongoDB",
+      "slug": "mongodb",
+      "description": "آموزش پایگاه داده NoSQL",
+      "coverImage": "./images/courses/mongodb.jpeg",
+      "teacherId": "u4",
+      "price": 1500000,
+      "duration": 15,
+      "studentsCount": 120,
+      "isActive": true,
+      "createdAt": "2025-03-10T17:00:00Z",
+      "sessions": [
+        "s21",
+        "s22"
+      ]
+    },
+    {
+      "id": "c9",
+      "title": "Docker",
+      "slug": "docker",
+      "description": "آموزش کانتینریزاسیون با Docker",
+      "coverImage": "./images/courses/docker.jpeg",
+      "teacherId": "u5",
+      "price": 2400000,
+      "duration": 22,
+      "studentsCount": 100,
+      "isActive": true,
+      "createdAt": "2025-03-15T18:00:00Z",
+      "sessions": [
+        "s23",
+        "s24",
+        "s25"
+      ]
+    },
+    {
+      "id": "c10",
+      "title": "GraphQL",
+      "slug": "graphql",
+      "description": "دوره کامل GraphQL",
+      "coverImage": "./images/courses/graphql.jpeg",
+      "teacherId": "u6",
+      "price": 2100000,
+      "duration": 20,
+      "studentsCount": 90,
+      "isActive": true,
+      "createdAt": "2025-03-20T19:00:00Z",
+      "sessions": [
+        "s26",
+        "s27"
+      ]
+    },
+    {
+      "id": "c11",
+      "title": "Next.js",
+      "slug": "next-js",
+      "description": "دوره جامع Next.js",
+      "coverImage": "./images/courses/next-js.jpeg",
+      "teacherId": "u2",
+      "price": 2700000,
+      "duration": 28,
+      "studentsCount": 110,
+      "isActive": true,
+      "createdAt": "2025-04-01T20:00:00Z",
+      "sessions": [
+        "s28",
+        "s29",
+        "s30"
+      ]
+    },
+    {
+      "id": "c12",
+      "title": "NestJS",
+      "slug": "nestjs",
+      "description": "دوره پیشرفته NestJS",
+      "coverImage": "./images/courses/nestjs.jpeg",
+      "teacherId": "u3",
+      "price": 2900000,
+      "duration": 30,
+      "studentsCount": 95,
+      "isActive": true,
+      "createdAt": "2025-04-05T21:00:00Z",
+      "sessions": [
+        "s31",
+        "s32"
+      ]
+    },
+    {
+      "id": "c13",
+      "title": "Flutter",
+      "slug": "flutter",
+      "description": "دوره ساخت اپلیکیشن موبایل با Flutter",
+      "coverImage": "./images/courses/flutter.jpeg",
+      "teacherId": "u4",
+      "price": 3200000,
+      "duration": 35,
+      "studentsCount": 85,
+      "isActive": true,
+      "createdAt": "2025-04-10T22:00:00Z",
+      "sessions": [
+        "s33",
+        "s34",
+        "s35"
+      ]
+    },
+    {
+      "id": "c14",
+      "title": "Svelte",
+      "slug": "svelte",
+      "description": "آموزش فریمورک Svelte",
+      "coverImage": "./images/courses/svelte.jpeg",
+      "teacherId": "u5",
+      "price": 1900000,
+      "duration": 18,
+      "studentsCount": 70,
+      "isActive": true,
+      "createdAt": "2025-04-15T23:00:00Z",
+      "sessions": [
+        "s36",
+        "s37"
+      ]
+    },
+    {
+      "id": "c15",
+      "title": "Kubernetes",
+      "slug": "kubernetes",
+      "description": "آموزش اورکستراسیون کانتینرها",
+      "coverImage": "./images/courses/kubernetes.jpeg",
+      "teacherId": "u6",
+      "price": 3600000,
+      "duration": 40,
+      "studentsCount": 75,
+      "isActive": true,
+      "createdAt": "2025-04-20T00:00:00Z",
+      "sessions": [
+        "s38",
+        "s39",
+        "s40"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "id": "s1",
+      "courseId": "c1",
+      "title": "معرفی دوره React",
+      "order": 1,
+      "videos": [
+        {
+          "id": "v1",
+          "title": "آشنایی با React",
+          "duration": 15,
+          "videoUrl": "./videos/react-js/intro.mp4",
+          "isFree": true
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "courseId": "c1",
+      "title": "مبانی React",
+      "order": 2,
+      "videos": [
+        {
+          "id": "v2",
+          "title": "کامپوننت‌ها در React",
+          "duration": 25,
+          "videoUrl": "./videos/react-js/components.mp4"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "courseId": "c1",
+      "title": "Hooks در React",
+      "order": 3,
+      "videos": [
+        {
+          "id": "v3",
+          "title": "useState و useEffect",
+          "duration": 30,
+          "videoUrl": "./videos/react-js/hooks.mp4"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "courseId": "c1",
+      "title": "Routing در React",
+      "order": 4,
+      "videos": [
+        {
+          "id": "v4",
+          "title": "نصب و راه‌اندازی React Router",
+          "duration": 20,
+          "videoUrl": "./videos/react-js/routing.mp4"
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "courseId": "c2",
+      "title": "معرفی Node.js",
+      "order": 1,
+      "videos": [
+        {
+          "id": "v5",
+          "title": "آشنایی با Node.js",
+          "duration": 18,
+          "videoUrl": "./videos/node-js/intro.mp4",
+          "isFree": true
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "courseId": "c2",
+      "title": "Express.js",
+      "order": 2,
+      "videos": [
+        {
+          "id": "v6",
+          "title": "راه‌اندازی سرور با Express",
+          "duration": 22,
+          "videoUrl": "./videos/node-js/express.mp4"
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "courseId": "c2",
+      "title": "Middleware در Express",
+      "order": 3,
+      "videos": [
+        {
+          "id": "v7",
+          "title": "نوشتن Middleware سفارشی",
+          "duration": 28,
+          "videoUrl": "./videos/node-js/middleware.mp4"
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "courseId": "c3",
+      "title": "معرفی Django",
+      "order": 1,
+      "videos": [
+        {
+          "id": "v8",
+          "title": "نصب و راه‌اندازی Django",
+          "duration": 20,
+          "videoUrl": "./videos/python-django/intro.mp4",
+          "isFree": true
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "courseId": "c3",
+      "title": "مدل‌ها در Django",
+      "order": 2,
+      "videos": [
+        {
+          "id": "v9",
+          "title": "تعریف مدل‌ها و Migrations",
+          "duration": 35,
+          "videoUrl": "./videos/python-django/models.mp4"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "courseId": "c4",
+      "title": "معرفی Vue.js",
+      "order": 1,
+      "videos": [
+        {
+          "id": "v10",
+          "title": "آشنایی با مفاهیم پایه Vue",
+          "duration": 15,
+          "videoUrl": "./videos/vue-js/intro.mp4",
+          "isFree": true
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "courseId": "c4",
+      "title": "Components در Vue",
+      "order": 2,
+      "videos": [
+        {
+          "id": "v11",
+          "title": "ساخت کامپوننت‌های قابل استفاده مجدد",
+          "duration": 25,
+          "videoUrl": "./videos/vue-js/components.mp4"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "courseId": "c4",
+      "title": "Vue Router",
+      "order": 3,
+      "videos": [
+        {
+          "id": "v12",
+          "title": "راه‌اندازی Routing در Vue",
+          "duration": 20,
+          "videoUrl": "./videos/vue-js/router.mp4"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "courseId": "c5",
+      "title": "معرفی React Native",
+      "order": 1,
+      "videos": [
+        {
+          "id": "v13",
+          "title": "مقایسه React Native با React",
+          "duration": 18,
+          "videoUrl": "./videos/react-native/intro.mp4",
+          "isFree": true
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "courseId": "c5",
+      "title": "کامپوننت‌های اصلی",
+      "order": 2,
+      "videos": [
+        {
+          "id": "v14",
+          "title": "View, Text, Image و دیگر کامپوننت‌ها",
+          "duration": 30,
+          "videoUrl": "./videos/react-native/components.mp4"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "courseId": "c5",
+      "title": "Navigation در React Native",
+      "order": 3,
+      "videos": [
+        {
+          "id": "v15",
+          "title": "پیاده‌سازی Navigation بین صفحات",
+          "duration": 25,
+          "videoUrl": "./videos/react-native/navigation.mp4"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "courseId": "c6",
+      "title": "Closures در JavaScript",
+      "order": 1,
+      "videos": [
+        {
+          "id": "v16",
+          "title": "درک مفهوم Closure",
+          "duration": 20,
+          "videoUrl": "./videos/advanced-js/closures.mp4",
+          "isFree": true
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "courseId": "c6",
+      "title": "Prototype و Inheritance",
+      "order": 2,
+      "videos": [
+        {
+          "id": "v17",
+          "title": "کار با Prototype در JavaScript",
+          "duration": 35,
+          "videoUrl": "./videos/advanced-js/prototype.mp4"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "courseId": "c7",
+      "title": "معرفی TypeScript",
+      "order": 1,
+      "videos": [
+        {
+          "id": "v18",
+          "title": "تفاوت TypeScript و JavaScript",
+          "duration": 15,
+          "videoUrl": "./videos/typescript/intro.mp4",
+          "isFree": true
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "courseId": "c7",
+      "title": "Types در TypeScript",
+      "order": 2,
+      "videos": [
+        {
+          "id": "v19",
+          "title": "تعریف انواع داده‌ها",
+          "duration": 25,
+          "videoUrl": "./videos/typescript/types.mp4"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "courseId": "c7",
+      "title": "Interfaces در TypeScript",
+      "order": 3,
+      "videos": [
+        {
+          "id": "v20",
+          "title": "کار با Interfaces",
+          "duration": 20,
+          "videoUrl": "./videos/typescript/interfaces.mp4"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "courseId": "c8",
+      "title": "معرفی MongoDB",
+      "order": 1,
+      "videos": [
+        {
+          "id": "v21",
+          "title": "تفاوت SQL و NoSQL",
+          "duration": 18,
+          "videoUrl": "./videos/mongodb/intro.mp4",
+          "isFree": true
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "courseId": "c8",
+      "title": "CRUD در MongoDB",
+      "order": 2,
+      "videos": [
+        {
+          "id": "v22",
+          "title": "عملیات پایه با MongoDB",
+          "duration": 30,
+          "videoUrl": "./videos/mongodb/crud.mp4"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "courseId": "c9",
+      "title": "معرفی Docker",
+      "order": 1,
+      "videos": [
+        {
+          "id": "v23",
+          "title": "مفاهیم پایه کانتینریزاسیون",
+          "duration": 20,
+          "videoUrl": "./videos/docker/intro.mp4",
+          "isFree": true
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "courseId": "c9",
+      "title": "Dockerfile",
+      "order": 2,
+      "videos": [
+        {
+          "id": "v24",
+          "title": "نوشتن Dockerfile",
+          "duration": 25,
+          "videoUrl": "./videos/docker/dockerfile.mp4"
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "courseId": "c9",
+      "title": "Docker Compose",
+      "order": 3,
+      "videos": [
+        {
+          "id": "v25",
+          "title": "مدیریت چند کانتینر با Compose",
+          "duration": 30,
+          "videoUrl": "./videos/docker/compose.mp4"
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "courseId": "c10",
+      "title": "معرفی GraphQL",
+      "order": 1,
+      "videos": [
+        {
+          "id": "v26",
+          "title": "مقایسه GraphQL و REST",
+          "duration": 18,
+          "videoUrl": "./videos/graphql/intro.mp4",
+          "isFree": true
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "courseId": "c10",
+      "title": "Schema در GraphQL",
+      "order": 2,
+      "videos": [
+        {
+          "id": "v27",
+          "title": "تعریف Schema و Types",
+          "duration": 28,
+          "videoUrl": "./videos/graphql/schema.mp4"
+        }
+      ]
+    },
+    {
+      "id": "s28",
+      "courseId": "c11",
+      "title": "معرفی Next.js",
+      "order": 1,
+      "videos": [
+        {
+          "id": "v28",
+          "title": "مزایای استفاده از Next.js",
+          "duration": 15,
+          "videoUrl": "./videos/next-js/intro.mp4",
+          "isFree": true
+        }
+      ]
+    },
+    {
+      "id": "s29",
+      "courseId": "c11",
+      "title": "Routing در Next.js",
+      "order": 2,
+      "videos": [
+        {
+          "id": "v29",
+          "title": "سیستم Routing خودکار",
+          "duration": 22,
+          "videoUrl": "./videos/next-js/routing.mp4"
+        }
+      ]
+    },
+    {
+      "id": "s30",
+      "courseId": "c11",
+      "title": "SSR و SSG",
+      "order": 3,
+      "videos": [
+        {
+          "id": "v30",
+          "title": "تفاوت Server-side Rendering و Static Generation",
+          "duration": 25,
+          "videoUrl": "./videos/next-js/rendering.mp4"
+        }
+      ]
+    },
+    {
+      "id": "s31",
+      "courseId": "c12",
+      "title": "معرفی NestJS",
+      "order": 1,
+      "videos": [
+        {
+          "id": "v31",
+          "title": "آشنایی با معماری NestJS",
+          "duration": 20,
+          "videoUrl": "./videos/nestjs/intro.mp4",
+          "isFree": true
+        }
+      ]
+    },
+    {
+      "id": "s32",
+      "courseId": "c12",
+      "title": "Modules در NestJS",
+      "order": 2,
+      "videos": [
+        {
+          "id": "v32",
+          "title": "ساخت و استفاده از Modules",
+          "duration": 30,
+          "videoUrl": "./videos/nestjs/modules.mp4"
+        }
+      ]
+    },
+    {
+      "id": "s33",
+      "courseId": "c13",
+      "title": "معرفی Flutter",
+      "order": 1,
+      "videos": [
+        {
+          "id": "v33",
+          "title": "نصب و راه‌اندازی Flutter",
+          "duration": 18,
+          "videoUrl": "./videos/flutter/intro.mp4",
+          "isFree": true
+        }
+      ]
+    },
+    {
+      "id": "s34",
+      "courseId": "c13",
+      "title": "Widgets در Flutter",
+      "order": 2,
+      "videos": [
+        {
+          "id": "v34",
+          "title": "آشنایی با Widgetهای اصلی",
+          "duration": 35,
+          "videoUrl": "./videos/flutter/widgets.mp4"
+        }
+      ]
+    },
+    {
+      "id": "s35",
+      "courseId": "c13",
+      "title": "State Management",
+      "order": 3,
+      "videos": [
+        {
+          "id": "v35",
+          "title": "مدیریت state با Provider",
+          "duration": 40,
+          "videoUrl": "./videos/flutter/state.mp4"
+        }
+      ]
+    },
+    {
+      "id": "s36",
+      "courseId": "c14",
+      "title": "معرفی Svelte",
+      "order": 1,
+      "videos": [
+        {
+          "id": "v36",
+          "title": "مقایسه Svelte با دیگر فریمورک‌ها",
+          "duration": 15,
+          "videoUrl": "./videos/svelte/intro.mp4",
+          "isFree": true
+        }
+      ]
+    },
+    {
+      "id": "s37",
+      "courseId": "c14",
+      "title": "Components در Svelte",
+      "order": 2,
+      "videos": [
+        {
+          "id": "v37",
+          "title": "ساخت کامپوننت‌های واکنش‌گرا",
+          "duration": 25,
+          "videoUrl": "./videos/svelte/components.mp4"
+        }
+      ]
+    },
+    {
+      "id": "s38",
+      "courseId": "c15",
+      "title": "معرفی Kubernetes",
+      "order": 1,
+      "videos": [
+        {
+          "id": "v38",
+          "title": "مفاهیم پایه Kubernetes",
+          "duration": 20,
+          "videoUrl": "./videos/kubernetes/intro.mp4",
+          "isFree": true
+        }
+      ]
+    },
+    {
+      "id": "s39",
+      "courseId": "c15",
+      "title": "Pods و Deployments",
+      "order": 2,
+      "videos": [
+        {
+          "id": "v39",
+          "title": "مدیریت Pods و Deployments",
+          "duration": 35,
+          "videoUrl": "./videos/kubernetes/intro.mp4"
+        }
+      ]
+    }
+  ]
+}
