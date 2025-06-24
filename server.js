@@ -13,20 +13,63 @@ const SECRET_KEY = 'your-very-secure-key-123!@#'
 const TOKEN_EXPIRY = '1h'
 
 // --- Middleware احراز هویت ---
+// لیست مسیرهای عمومی که نیاز به احراز هویت ندارند
+const PUBLIC_ROUTES = [
+  '/register',
+  '/login',
+  '/courses'
+]
+
+// لیست مسیرهای ادمین
+const ADMIN_ROUTES = [
+  '/users',
+  '/ban',
+  '/offs/all',
+  '/offs/:courseId'
+]
+
+// --- Middleware احراز هویت ---
 server.use((req, res, next) => {
-  if (req.path === '/register' || req.path === '/login') return next()
+  // اگر مسیر عمومی است، اجازه دسترسی بده
+  if (PUBLIC_ROUTES.some(route => {
+    if (route.includes(':')) {
+      // برای مسیرهای دارای پارامتر مثل /offs/:courseId
+      const basePath = route.split('/:')[0];
+      return req.path.startsWith(basePath);
+    }
+    return req.path === route;
+  })) {
+    return next();
+  }
+
+  const authHeader = req.headers['authorization'];
+  const token = authHeader && authHeader.split(' ')[1];
   
-  const authHeader = req.headers['authorization']
-  const token = authHeader && authHeader.split(' ')[1]
-  
-  if (!token) return res.status(401).json({ error: 'دسترسی غیرمجاز' })
+  if (!token) return res.status(401).json({ error: 'دسترسی غیرمجاز' });
 
   jwt.verify(token, SECRET_KEY, (err, user) => {
-    if (err) return res.status(403).json({ error: 'توکن نامعتبر' })
-    req.user = user
-    next()
-  })
-})
+    if (err) return res.status(403).json({ error: 'توکن نامعتبر' });
+    
+    // بررسی مسیرهای ادمین
+    if (ADMIN_ROUTES.some(route => {
+      if (route.includes(':')) {
+        const basePath = route.split('/:')[0];
+        return req.path.startsWith(basePath);
+      }
+      return req.path === route;
+    })) {
+      const db = router.db;
+      const userData = db.get('users').find({ id: user.userId }).value();
+      
+      if (!userData || userData.role !== 'admin') {
+        return res.status(403).json({ error: 'دسترسی مخصوص ادمین' });
+      }
+    }
+
+    req.user = user;
+    next();
+  });
+});
 
 // --- روت‌های API ---
 
