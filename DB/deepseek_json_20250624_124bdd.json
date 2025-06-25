@@ -3,7 +3,7 @@
     {
       "id": "e9c137d0-8259-4c1e-b97f-8eb33a0b33e5",
       "username": "amirhosein",
-      "role": "user",
+      "role": "admin",
       "password": "$2b$10$bpcz.GpFsv1FZ6QKKQgY.O.UHfYdcnd/AUdUZvLbtCKRLQr4oIyqi",
       "phonenumber": "09364457844",
       "fullname": "امیرحسین غلامی",
@@ -14,22 +14,11 @@
     {
       "id": "83ba20c4-95bf-4559-be67-297af2df7631",
       "username": "ali",
-      "role": "user",
+      "role": "teacher",
       "password": "$2b$10$0JOZrHLlza2Gb1RUa2IJw.5xR1BZpcVY2zy3MWaFUzu7E81T0KYo2",
       "phonenumber": "09107654321",
       "fullname": "علی رضایی",
       "email": "ali@example.com",
-      "isBanned": false,
-      "purchasedCourses": []
-    },
-    {
-      "id": "7080dd13-8351-46aa-a938-8e4d756b0273",
-      "username": "hojjat",
-      "role": "user",
-      "password": "$2b$10$QRDS8MxEaS9U8SIyGn4u2..dqNTLRnb28ZY4ovzD.5sEyZIqti3Je",
-      "phonenumber": "09123456789",
-      "fullname": "حجت ترابی",
-      "email": "hojjat@example.com",
       "isBanned": false,
       "purchasedCourses": []
     },
@@ -42,10 +31,7 @@
       "fullname": "نازنین کریمی",
       "email": "nazanin@example.com",
       "isBanned": false,
-      "purchasedCourses": [
-        "c1",
-        "c2"
-      ]
+      "purchasedCourses": ["c1", "c7"]
     },
     {
       "id": "ba876b9e-3864-4b88-b8fd-9f84cecf7312",
@@ -112,6 +98,17 @@
       "email": "fatemeh@example.com",
       "isBanned": false,
       "purchasedCourses": []
+    },
+    {
+      "id": "c057a085-f902-4f37-a7ba-ad24c30f2045",
+      "username": "saeid",
+      "role": "user",
+      "password": "$2b$10$5nftZDnZwMkXnMw821naruzuYHRJPmOIRXuCOAJQYYzdZjATKv17K",
+      "phonenumber": "09123456677",
+      "fullname": "سعید معروفی",
+      "email": "saeid@gmail.com",
+      "isBanned": false,
+      "purchasedCourses": []
     }
   ],
   "courses": [
@@ -120,265 +117,225 @@
       "title": "React JS",
       "slug": "react-js",
       "description": "دوره کامل React از مقدماتی تا پیشرفته",
-      "coverImage": "./images/courses/react-js.jpeg",
-      "teacherId": "u2",
+      "image": "/uploads/courses/ee24a75c-48b1-4f86-9372-3f8ef86dd8fb.jpg",
+      "details": "React Js Course",
+      "teacherId": "93999795-8e53-4e84-8784-a988ac0d399c",
       "price": 2500000,
       "duration": 30,
       "studentsCount": 150,
-      "isActive": true,
+      "isSupport": true,
       "createdAt": "2025-02-01T10:00:00Z",
-      "sessions": [
-        "s1",
-        "s2",
-        "s3",
-        "s4"
-      ]
+      "sessions": ["s1", "s2", "s3", "s4"]
     },
     {
       "id": "c2",
       "title": "Node JS",
       "slug": "node-js",
       "description": "دوره جامع Node.js و Express",
-      "coverImage": "./images/courses/node-js.jpeg",
+      "image": "",
+      "details": "Node Js Course",
       "teacherId": "u3",
       "price": 3000000,
       "duration": 40,
       "studentsCount": 120,
-      "isActive": true,
+      "isSupport": true,
       "createdAt": "2025-02-05T11:00:00Z",
-      "sessions": [
-        "s5",
-        "s6",
-        "s7"
-      ]
+      "sessions": ["s5", "s6", "s7"]
     },
     {
       "id": "c3",
       "title": "Python Django",
       "slug": "python-django",
       "description": "دوره کامل توسعه وب با Django",
-      "coverImage": "./images/courses/python-django.jpeg",
+      "image": "",
+      "details": "Python Django Course",
       "teacherId": "u4",
       "price": 2800000,
       "duration": 35,
       "studentsCount": 100,
-      "isActive": true,
+      "isSupport": true,
       "createdAt": "2025-02-10T12:00:00Z",
-      "sessions": [
-        "s8",
-        "s9"
-      ]
+      "sessions": ["s8", "s9"]
     },
     {
       "id": "c4",
       "title": "Vue JS",
       "slug": "vue-js",
       "description": "دوره پیشرفته Vue.js",
-      "coverImage": "./images/courses/vue-js.jpeg",
+      "image": "",
+      "details": "Vue Js Course",
       "teacherId": "u5",
       "price": 2200000,
       "duration": 25,
       "studentsCount": 90,
-      "isActive": true,
+      "isSupport": true,
       "createdAt": "2025-02-15T13:00:00Z",
-      "sessions": [
-        "s10",
-        "s11",
-        "s12"
-      ]
+      "sessions": ["s10", "s11", "s12"]
     },
     {
       "id": "c5",
       "title": "React Native",
       "slug": "react-native",
       "description": "دوره ساخت اپلیکیشن موبایل",
-      "coverImage": "./images/courses/react-native.jpeg",
+      "image": "",
+      "details": "React Native Course",
       "teacherId": "u6",
       "price": 3500000,
       "duration": 45,
       "studentsCount": 80,
-      "isActive": true,
+      "isSupport": true,
       "createdAt": "2025-02-20T14:00:00Z",
-      "sessions": [
-        "s13",
-        "s14",
-        "s15"
-      ]
+      "sessions": ["s13", "s14", "s15"]
     },
     {
       "id": "c6",
       "title": "JavaScript پیشرفته",
       "slug": "advanced-js",
       "description": "آموزش مفاهیم پیشرفته جاوااسکریپت",
-      "coverImage": "./images/courses/advanced-js.jpeg",
+      "image": "",
+      "details": "Advance js Course",
       "teacherId": "u2",
       "price": 2000000,
       "duration": 20,
       "studentsCount": 200,
-      "isActive": true,
+      "isSupport": true,
       "createdAt": "2025-03-01T15:00:00Z",
-      "sessions": [
-        "s16",
-        "s17"
-      ]
+      "sessions": ["s16", "s17"]
     },
     {
       "id": "c7",
       "title": "TypeScript",
       "slug": "typescript",
       "description": "دوره کامل TypeScript",
-      "coverImage": "./images/courses/typescript.jpeg",
-      "teacherId": "u3",
+      "image": "",
+      "details": "TypeScript Course",
+      "teacherId": "93999795-8e53-4e84-8784-a988ac0d399c",
       "price": 1800000,
       "duration": 18,
       "studentsCount": 150,
-      "isActive": true,
+      "isSupport": true,
       "createdAt": "2025-03-05T16:00:00Z",
-      "sessions": [
-        "s18",
-        "s19",
-        "s20"
-      ]
+      "sessions": ["s18", "s19", "s20"]
     },
     {
       "id": "c8",
       "title": "MongoDB",
       "slug": "mongodb",
       "description": "آموزش پایگاه داده NoSQL",
-      "coverImage": "./images/courses/mongodb.jpeg",
+      "image": "",
+      "details": "No SQL Course",
       "teacherId": "u4",
       "price": 1500000,
       "duration": 15,
       "studentsCount": 120,
-      "isActive": true,
+      "isSupport": true,
       "createdAt": "2025-03-10T17:00:00Z",
-      "sessions": [
-        "s21",
-        "s22"
-      ]
+      "sessions": ["s21", "s22"]
     },
     {
       "id": "c9",
       "title": "Docker",
       "slug": "docker",
       "description": "آموزش کانتینریزاسیون با Docker",
-      "coverImage": "./images/courses/docker.jpeg",
+      "image": "",
+      "details": "Docker Course",
       "teacherId": "u5",
       "price": 2400000,
       "duration": 22,
       "studentsCount": 100,
-      "isActive": true,
+      "isSupport": true,
       "createdAt": "2025-03-15T18:00:00Z",
-      "sessions": [
-        "s23",
-        "s24",
-        "s25"
-      ]
+      "sessions": ["s23", "s24", "s25"]
     },
     {
       "id": "c10",
       "title": "GraphQL",
       "slug": "graphql",
       "description": "دوره کامل GraphQL",
-      "coverImage": "./images/courses/graphql.jpeg",
+      "image": "",
+      "details": "Graph Ql Course",
       "teacherId": "u6",
       "price": 2100000,
       "duration": 20,
       "studentsCount": 90,
-      "isActive": true,
+      "isSupport": true,
       "createdAt": "2025-03-20T19:00:00Z",
-      "sessions": [
-        "s26",
-        "s27"
-      ]
+      "sessions": ["s26", "s27"]
     },
     {
       "id": "c11",
       "title": "Next.js",
       "slug": "next-js",
       "description": "دوره جامع Next.js",
-      "coverImage": "./images/courses/next-js.jpeg",
+      "image": "",
+      "details": "Next Js Course",
       "teacherId": "u2",
       "price": 2700000,
       "duration": 28,
       "studentsCount": 110,
-      "isActive": true,
+      "isSupport": true,
       "createdAt": "2025-04-01T20:00:00Z",
-      "sessions": [
-        "s28",
-        "s29",
-        "s30"
-      ]
+      "sessions": ["s28", "s29", "s30"]
     },
     {
       "id": "c12",
       "title": "NestJS",
       "slug": "nestjs",
       "description": "دوره پیشرفته NestJS",
-      "coverImage": "./images/courses/nestjs.jpeg",
       "teacherId": "u3",
+      "image": "",
+      "details": "Nest Js Course",
       "price": 2900000,
       "duration": 30,
       "studentsCount": 95,
-      "isActive": true,
+      "isSupport": true,
       "createdAt": "2025-04-05T21:00:00Z",
-      "sessions": [
-        "s31",
-        "s32"
-      ]
+      "sessions": ["s31", "s32"]
     },
     {
       "id": "c13",
       "title": "Flutter",
       "slug": "flutter",
       "description": "دوره ساخت اپلیکیشن موبایل با Flutter",
-      "coverImage": "./images/courses/flutter.jpeg",
-      "teacherId": "u4",
+      "image": "",
+      "details": "Flutter Course",
+      "teacherId": "d594fd52-3c68-42a7-a30c-f7c7bbaa4802",
       "price": 3200000,
       "duration": 35,
       "studentsCount": 85,
-      "isActive": true,
+      "isSupport": true,
       "createdAt": "2025-04-10T22:00:00Z",
-      "sessions": [
-        "s33",
-        "s34",
-        "s35"
-      ]
+      "sessions": ["s33", "s34", "s35"]
     },
     {
       "id": "c14",
       "title": "Svelte",
       "slug": "svelte",
       "description": "آموزش فریمورک Svelte",
-      "coverImage": "./images/courses/svelte.jpeg",
+      "image": "",
+      "details": "Svelte Course",
       "teacherId": "u5",
       "price": 1900000,
       "duration": 18,
       "studentsCount": 70,
-      "isActive": true,
+      "isSupport": true,
       "createdAt": "2025-04-15T23:00:00Z",
-      "sessions": [
-        "s36",
-        "s37"
-      ]
+      "sessions": ["s36", "s37"]
     },
     {
       "id": "c15",
       "title": "Kubernetes",
       "slug": "kubernetes",
       "description": "آموزش اورکستراسیون کانتینرها",
-      "coverImage": "./images/courses/kubernetes.jpeg",
       "teacherId": "u6",
+      "details": "Kubernetes Course",
       "price": 3600000,
       "duration": 40,
       "studentsCount": 75,
-      "isActive": true,
+      "image": "",
+      "isSupport": true,
       "createdAt": "2025-04-20T00:00:00Z",
-      "sessions": [
-        "s38",
-        "s39",
-        "s40"
-      ]
+      "sessions": ["s38", "s39", "s40"]
     }
   ],
   "sessions": [
@@ -395,7 +352,8 @@
           "videoUrl": "./videos/react-js/intro.mp4",
           "isFree": true
         }
-      ]
+      ],
+      "videoUrl": "/uploads/videos/a91cf530-9d29-401d-8088-8def8bbe1a1d.mp4"
     },
     {
       "id": "s2",
@@ -942,6 +900,30 @@
           "videoUrl": "./videos/kubernetes/intro.mp4"
         }
       ]
+    }
+  ],
+  "teachers": [
+    {
+      "id": "93999795-8e53-4e84-8784-a988ac0d399c",
+      "username": "hojjat",
+      "password": "$2b$10$tneKUL.EytU8OUSuKxPxXeC.1D166.EKXUCTaUfny08DFXUS5FlS6",
+      "email": "hojjat@example.com",
+      "phonenumber": "09123456789",
+      "fullname": "حجت ترابی",
+      "courseIds": ["c1", "c7"],
+      "stack": "فرانت اند",
+      "isBanned": false
+    },
+    {
+      "id": "d594fd52-3c68-42a7-a30c-f7c7bbaa4802",
+      "username": "shahin",
+      "password": "$2b$10$.XdIIrXQs2khnLcX/P1NmOPifEo7J9W9X9R5EUNF.5/m4ccauwheC",
+      "email": "shahin@gmail.com",
+      "phonenumber": "09341123456",
+      "fullname": "شاهین احمدی",
+      "isBanned": false,
+      "courseIds": ["c13"],
+      "stack": "برنامه نویس موبایل"
     }
   ]
 }
