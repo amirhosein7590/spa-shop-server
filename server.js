@@ -1,4 +1,3 @@
-
 const jsonServer = require("json-server");
 const server = jsonServer.create();
 const router = jsonServer.router("./DB/deepseek_json_20250624_124bdd.json");
@@ -21,7 +20,14 @@ const SECRET_KEY = "your-very-secure-key-123!@#";
 const TOKEN_EXPIRY = "1h";
 
 // لیست مسیرهای عمومی که نیاز به احراز هویت ندارند
-const PUBLIC_ROUTES = ["/register", "/login", "/courses", "/courses/:courseId"];
+const PUBLIC_ROUTES = [
+  "/register",
+  "/login",
+  "/courses",
+  "/courses/:courseId",
+  "/refresh-token",
+  "/forgot-password",
+];
 
 // لیست مسیرهای ادمین
 const ADMIN_ROUTES = ["/users", "/ban", "/offs/all", "/offs/:courseId"];
@@ -125,26 +131,33 @@ server.use((req, res, next) => {
  * @apiBody {String} fullname نام کامل
  * @apiBody {String} role نقش (user یا teacher)
  */
-server.post('/register', async (req, res) => {
-  const { username, password, email, fullname , phonenumber, role = 'user' } = req.body;
+server.post("/register", async (req, res) => {
+  const {
+    username,
+    password,
+    email,
+    fullname,
+    phonenumber,
+    role = "user",
+  } = req.body;
 
   // اعتبارسنجی ورودی‌ها
   if (!username || !password || !email || !fullname || !phonenumber) {
-    return res.status(400).json({ error: 'تمام فیلدها الزامی هستند' });
+    return res.status(400).json({ error: "تمام فیلدها الزامی هستند" });
   }
 
-  if (role !== 'user' && role !== 'teacher') {
-    return res.status(400).json({ error: 'نقش نامعتبر (فقط user یا teacher)' });
+  if (role !== "user" && role !== "teacher") {
+    return res.status(400).json({ error: "نقش نامعتبر (فقط user یا teacher)" });
   }
 
   const db = router.db;
 
   // بررسی تکراری نبودن username (هم در کاربران و هم معلمین)
-  const userExists = db.get('users').find({ username }).value();
-  const teacherExists = db.get('teachers').find({ username }).value();
+  const userExists = db.get("users").find({ username }).value();
+  const teacherExists = db.get("teachers").find({ username }).value();
 
   if (userExists || teacherExists) {
-    return res.status(400).json({ error: 'نام کاربری قبلا ثبت شده است' });
+    return res.status(400).json({ error: "نام کاربری قبلا ثبت شده است" });
   }
 
   // هش کردن رمز عبور
@@ -158,24 +171,28 @@ server.post('/register', async (req, res) => {
     email,
     phonenumber,
     fullname,
-    isBanned : false
+    isBanned: false,
   };
 
   // ذخیره در جدول مناسب بر اساس نقش
-  if (role === 'teacher') {
-    let {stack , courseIds} = req.body
-    db.get('teachers').push({...newAccount ,courseIds , stack}).write();
+  if (role === "teacher") {
+    let { stack, courseIds } = req.body;
+    db.get("teachers")
+      .push({ ...newAccount, courseIds, stack })
+      .write();
   } else {
-    db.get('users').push({
-      ...newAccount,
-      purchasedCourses: []
-    }).write();
+    db.get("users")
+      .push({
+        ...newAccount,
+        purchasedCourses: [],
+      })
+      .write();
   }
 
-  res.status(201).json({ 
-    message: 'ثبت‌نام موفق', 
+  res.status(201).json({
+    message: "ثبت‌نام موفق",
     userId: newAccount.id,
-    role
+    role,
   });
 });
 
@@ -184,61 +201,141 @@ server.post('/register', async (req, res) => {
  * @apiBody {String} username نام کاربری
  * @apiBody {String} password رمز عبور
  */
-server.post('/login', async (req, res) => {
+
+server.post("/login", async (req, res) => {
   const { username, password } = req.body;
+
+  const db = router.db;
+  const users = db.get("users").value();
+  const teachers = db.get("teachers").value();
+
+  const account =
+    users.find((u) => u.username === username) ||
+    teachers.find((t) => t.username === username);
+
+  console.log("👤 Account found:", account);
+
+  if (!account) {
+    console.log("❌ Account not found for username:", username);
+    return res.status(401).json({ error: "کاربری با این مشخصات یافت نشد" });
+  }
+
+  if (!account.password) {
+    console.log("❌ Password is missing in the account object:", account);
+    return res.status(401).json({ error: "رمز عبور کاربر وجود ندارد" });
+  }
+
+  try {
+    const isPasswordValid = await bcrypt.compare(password, account.password);
+    console.log("✅ Password match:", isPasswordValid);
+
+    if (!isPasswordValid) {
+      return res.status(401).json({ error: "رمز عبور نادرست است" });
+    }
+
+    // 👇 ساختن توکن‌ها
+    const token = jwt.sign(
+      { username: account.username, role: account.role },
+      "access-secret", // این رو بعداً تو env بذار
+      { expiresIn: "15m" }
+    );
+
+    // 👇 بازگشت پاسخ با توکن‌ها
+    res.status(200).json({
+      message: "ورود موفق",
+      userId : account.id,
+      role: account.role,
+      token,
+      purchasedCourses : account.purchasedCourses
+    });
+  } catch (err) {
+    console.error("💥 Error during bcrypt.compare:", err);
+    res.status(500).json({ error: "خطای داخلی سرور" });
+  }
+});
+
+
+/**
+ * @api {post} /refresh-token ساخت توکن جدید از اطلاعات قبلی
+ * @apiBody {String} userId شناسه کاربر
+ * @apiBody {String} role نقش کاربر (user یا teacher یا admin)
+ */
+
+server.post("/refresh-token", (req, res) => {
+  const { userId, role } = req.body;
+
+  if (!userId || !role) {
+    return res.status(400).json({ error: "userId و role الزامی هستند" });
+  }
+
   const db = router.db;
 
-  // جستجو در کاربران عادی
-  const user = db.get('users').find({ username }).value();
-  
-  // اگر کاربر عادی نبود، در معلمین جستجو کن
-  const teacher = user ? null : db.get('teachers').find({ username }).value();
-  const account = user || teacher;
+  let user;
+  let userTable;
 
-  if (!account || !(await bcrypt.compare(password, account.password))) {
-    return res.status(401).json({ error: 'نام کاربری یا رمز عبور نادرست' });
+  if (role === "teacher") {
+    userTable = "teachers";
+  } else if (role === "user" || role === "admin") {
+    userTable = "users"; // admin هم داخل users است
+  } else {
+    return res.status(400).json({ error: "نقش نامعتبر است" });
   }
 
-  if (account.isBanned) {
-    return res.status(403).json({ error: 'حساب شما مسدود شده است' });
+  user = db.get(userTable).find({ id: userId }).value();
+
+  if (!user) {
+    return res.status(404).json({ error: "کاربر یافت نشد" });
   }
 
-  // تشخیص نوع حساب (کاربر یا معلم)
-  const role = teacher ? 'teacher' : 'user';
-  const token = jwt.sign({ userId: account.id, role }, SECRET_KEY, {
+  const newToken = jwt.sign({ userId, role }, SECRET_KEY, {
     expiresIn: TOKEN_EXPIRY,
   });
 
-  res.json({ 
-    token, 
-    userId: account.id,
-    role // اضافه کردن نقش به پاسخ
-  });
+  res.json({ token: newToken });
 });
 
 /**
- * @api {get} /validate/token بررسی انقضای توکن کاربر
- * @apiHeader {String} Authorization توکن کاربر (Bearer Token)
+ * @api {post} /forgot-password بازیابی رمز عبور
+ * @apiBody {String} username نام کاربری
+ * @apiBody {String} newPassword رمز عبور جدید
  */
-server.get("/validate/token", (req, res) => {
-  const authHeader = req.headers["authorization"];
-  const token = authHeader && authHeader.split(" ")[1];
 
-  if (!token) {
-    return res.status(401).json({ valid: false, error: "توکن وجود ندارد" });
+server.post("/forgot-password", async (req, res) => {
+  const { username, newPassword } = req.body;
+
+  if (!username || !newPassword) {
+    return res.status(400).json({ error: "نام کاربری و رمز جدید الزامی است" });
   }
 
-  // بررسی اعتبار توکن بدون بررسی در دیتابیس (فقط انقضا)
-  jwt.verify(token, SECRET_KEY, (err, user) => {
-    if (err) {
-      return res.status(200).json({
-        valid: false,
-        error: "توکن منقضی شده یا نامعتبر است",
-      });
+  const db = router.db;
+  const tables = ["users", "teachers"]; // چون فقط تو این دوتا جدول دنبال کاربر می‌گردی
+
+  let user = null;
+  let foundTable = null;
+
+  for (const table of tables) {
+    const found = db.get(table).find({ username }).value();
+    if (found) {
+      user = found;
+      foundTable = table;
+      break;
     }
-    res.json({ valid: true, userId: user.userId });
-  });
+  }
+
+  if (!user) {
+    return res.status(404).json({ error: "کاربر یافت نشد" });
+  }
+
+  const hashedPassword = await bcrypt.hash(newPassword, 10);
+
+  db.get(foundTable)
+    .find({ username })
+    .assign({ password: hashedPassword })
+    .write();
+
+  res.json({ success: true, message: "رمز عبور با موفقیت تغییر کرد" });
 });
+
 
 /**
  * @api {post} /ban بن/رفع بن کاربران و معلمین
@@ -247,25 +344,32 @@ server.get("/validate/token", (req, res) => {
  * @apiBody {Boolean} isBanned وضعیت بن
  * @apiBody {String} targetType نوع حساب (user/teacher)
  */
-server.post('/ban', (req, res) => {
-  const { targetId, isBanned, targetType = 'user' } = req.body;
+server.post("/ban", (req, res) => {
+  const { targetId, isBanned, targetType = "user" } = req.body;
   const db = router.db;
 
   // اعتبارسنجی ورودی‌ها
-  if (typeof isBanned !== 'boolean') {
-    return res.status(400).json({ error: 'مقدار isBanned باید true/false باشد' });
+  if (typeof isBanned !== "boolean") {
+    return res
+      .status(400)
+      .json({ error: "مقدار isBanned باید true/false باشد" });
   }
 
-  if (targetType !== 'user' && targetType !== 'teacher') {
-    return res.status(400).json({ error: 'نوع هدف نامعتبر (فقط user یا teacher)' });
+  if (targetType !== "user" && targetType !== "teacher") {
+    return res
+      .status(400)
+      .json({ error: "نوع هدف نامعتبر (فقط user یا teacher)" });
   }
 
   // پیدا کردن جدول هدف
-  const targetTable = targetType === 'user' ? db.get('users') : db.get('teachers');
+  const targetTable =
+    targetType === "user" ? db.get("users") : db.get("teachers");
   const target = targetTable.find({ id: targetId }).value();
 
   if (!target) {
-    return res.status(404).json({ error: `${targetType === 'user' ? 'کاربر' : 'معلم'} یافت نشد` });
+    return res
+      .status(404)
+      .json({ error: `${targetType === "user" ? "کاربر" : "معلم"} یافت نشد` });
   }
 
   // اعمال تغییرات
@@ -273,9 +377,11 @@ server.post('/ban', (req, res) => {
 
   res.json({
     success: true,
-    message: `${targetType === 'user' ? 'کاربر' : 'معلم'} ${isBanned ? 'بن' : 'رفع بن'} شد`,
+    message: `${targetType === "user" ? "کاربر" : "معلم"} ${
+      isBanned ? "بن" : "رفع بن"
+    } شد`,
     targetType,
-    targetId
+    targetId,
   });
 });
 
@@ -309,23 +415,23 @@ server.post("/purchase", (req, res) => {
   });
 });
 
-
 /**
  * @api {get} /teachers/:teacherId/courses دریافت دوره‌های یک معلم
  * @apiParam {String} teacherId شناسه معلم
  */
-server.get('/teachers/:teacherId/courses', (req, res) => {
+server.get("/teachers/:teacherId/courses", (req, res) => {
   const { teacherId } = req.params;
   const db = router.db;
 
-  const teacher = db.get('teachers').find({ id: teacherId }).value();
+  const teacher = db.get("teachers").find({ id: teacherId }).value();
   if (!teacher) {
-    return res.status(404).json({ error: 'معلم یافت نشد' });
+    return res.status(404).json({ error: "معلم یافت نشد" });
   }
 
   // دریافت تمام دوره‌های این معلم از جدول courses
-  const teacherCourses = db.get('courses')
-    .filter(course => teacher.courseIds.includes(course.id))
+  const teacherCourses = db
+    .get("courses")
+    .filter((course) => teacher.courseIds.includes(course.id))
     .value();
 
   res.json({
@@ -333,7 +439,7 @@ server.get('/teachers/:teacherId/courses', (req, res) => {
       id: teacher.id,
       fullname: teacher.fullname,
     },
-    courses: teacherCourses
+    courses: teacherCourses,
   });
 });
 

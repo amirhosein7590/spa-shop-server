@@ -4,7 +4,7 @@
       "id": "e9c137d0-8259-4c1e-b97f-8eb33a0b33e5",
       "username": "amirhosein",
       "role": "admin",
-      "password": "$2b$10$bpcz.GpFsv1FZ6QKKQgY.O.UHfYdcnd/AUdUZvLbtCKRLQr4oIyqi",
+      "password": "$2b$10$yUUNmFaroiEQm0XlKjrOE.5YF/WqAbb7ES9hNPmDQQy2zBwtFv4By",
       "phonenumber": "09364457844",
       "fullname": "امیرحسین غلامی",
       "email": "amirhosein@example.com",
@@ -13,9 +13,9 @@
     },
     {
       "id": "83ba20c4-95bf-4559-be67-297af2df7631",
-      "username": "ali",
-      "role": "teacher",
-      "password": "$2b$10$0JOZrHLlza2Gb1RUa2IJw.5xR1BZpcVY2zy3MWaFUzu7E81T0KYo2",
+      "username": "ali_8955",
+      "role": "user",
+      "password": "$2b$10$KT3UGeKYOMWN6Ufa833rvecFBuSdAQPoCTcnildkSn.WrKMB2ElPq",
       "phonenumber": "09107654321",
       "fullname": "علی رضایی",
       "email": "ali@example.com",
@@ -26,18 +26,21 @@
       "id": "d142f596-eaf5-4cb9-9ab9-a064ddbc0551",
       "username": "nazanin",
       "role": "user",
-      "password": "$2b$10$939qlISBHWr/VaBNA.D7ZO2k0UkYoE/gzaKQaOaw1N4MFcT4ra2T2",
+      "password": "$2b$10$JQeadpqFPMGnce.gjIwsLOoODlIB4BcKtJxuTbWd4u/3xrP.7pGw.",
       "phonenumber": "09369876543",
       "fullname": "نازنین کریمی",
       "email": "nazanin@example.com",
       "isBanned": false,
-      "purchasedCourses": ["c1", "c7"]
+      "purchasedCourses": [
+        "c1",
+        "c7"
+      ]
     },
     {
       "id": "ba876b9e-3864-4b88-b8fd-9f84cecf7312",
-      "username": "reza",
+      "username": "reza@33785",
       "role": "user",
-      "password": "$2b$10$e1XO49Rd9rod8DDF8UDmb.tesscDuIauZdlReniWq47SI9syUBc..",
+      "password": "$2b$10$ms6WyZr/Ldpqhgn7jky6G.kcxC00Ee/9czve.LWpnE41eEkbfXwgm",
       "phonenumber": "09111234567",
       "fullname": "رضا محمدی",
       "email": "reza@example.com",
@@ -48,7 +51,7 @@
       "id": "02cd0585-ff11-4f52-b09d-8aa291d5c479",
       "username": "mostafa",
       "role": "user",
-      "password": "$2b$10$SJXG1GR67JqDI./9HWuIYuvaYzi.qUP.WxS7Zy/wiI4WhucuQCyhq",
+      "password": "$2b$10$f0HAJJ4dmKSrOE3ijY8uxu88oIp0jcAGuJDkRpk23i6cVpTkzGEYi",
       "phonenumber": "09351234567",
       "fullname": "مصطفی احمدی",
       "email": "mostafa@example.com",
@@ -57,9 +60,9 @@
     },
     {
       "id": "0600e5b9-28c2-4d1c-8fe2-3f09d76b778e",
-      "username": "vahid",
+      "username": "vahid#45",
       "role": "user",
-      "password": "$2b$10$mNcS.u9EJaJfmqyHNPAcoOW3n9zHCIwL70l3KuWMwfTz1sFV8FgMa",
+      "password": "$2b$10$dBKRtpSePTEMAEavI0K6w.TJx3pSruJ.EMMFEHxJ2lLPeml/kgwUW",
       "phonenumber": "09129876543",
       "fullname": "وحید مرادی",
       "email": "vahid@example.com",
@@ -68,9 +71,9 @@
     },
     {
       "id": "47c9a918-a046-42ec-bd66-f380c478e3b6",
-      "username": "sara",
+      "username": "sara%7899",
       "role": "user",
-      "password": "$2b$10$w7uJIqJF47AdJQQZtFRIAeMzxNWFjWp5A.y3Kr9Ec62P8V8VCSZrq",
+      "password": "$2b$10$doSVC4o5jDFyrC92Hf/YveSAaJrMMKH5/iVp4tGFRuKSqc3Rv1j/C",
       "phonenumber": "09351234567",
       "fullname": "سارا احمدی",
       "email": "sara@example.com",
@@ -81,7 +84,7 @@
       "id": "e8d15fb8-cf88-4f17-bc22-9d9a247a4224",
       "username": "mohammad",
       "role": "user",
-      "password": "$2b$10$mMbyeICz350piE9v4uOo0O83ufDj6uQDyFBApRfZL6in16pRwWMJe",
+      "password": "$2b$10$yUFoeoBbVap4JRJaBTexjuceNa0dVnB.rgwI0ogAyq0jeSIMh7U4q",
       "phonenumber": "09111234567",
       "fullname": "محمد حسینی",
       "email": "mohammad@example.com",
@@ -92,7 +95,7 @@
       "id": "1f5b75e6-5289-4911-9210-75303ca75598",
       "username": "fatemeh",
       "role": "user",
-      "password": "$2b$10$pGckdpQUgLAiHW5cwTSzYe7l4QSV2fPgAN6yhCPdheKL7tmVh3o8i",
+      "password": "$2b$10$I0cx4KR.DbPiE6LEFbh08u1hnI60tt8zw9/Z2lx/7kNeGju89MD82",
       "phonenumber": "09369876543",
       "fullname": "فاطمه محمدی",
       "email": "fatemeh@example.com",
@@ -103,245 +106,345 @@
       "id": "c057a085-f902-4f37-a7ba-ad24c30f2045",
       "username": "saeid",
       "role": "user",
-      "password": "$2b$10$5nftZDnZwMkXnMw821naruzuYHRJPmOIRXuCOAJQYYzdZjATKv17K",
+      "password": "$2b$10$4OAYV4NTCg8918dmrnlCG.X/ozGJyhqzYaHj8TLg/Bv337dt1XPF6",
       "phonenumber": "09123456677",
       "fullname": "سعید معروفی",
       "email": "saeid@gmail.com",
       "isBanned": false,
       "purchasedCourses": []
+    },
+    {
+      "id": "631b5011-03d8-4c9b-a3c8-ab3e55644f90",
+      "username": "qasem",
+      "password": "$2b$10$XwAr7zwKOjzMU1bMUqQv3Oe.dZSGvj.RXuQa5BZ2yTxESCQT33xbC",
+      "email": "qasemMhm@gmail.com",
+      "phonenumber": "09336667744",
+      "fullname": "قاسم محمدی",
+      "isBanned": false,
+      "purchasedCourses": []
+    },
+    {
+      "id": "99a30a80-ad0b-45a9-90eb-8e28febfcfc6",
+      "username": "Souroush",
+      "password": "$2b$10$Rm0RRLs7mgdRweooyJITHu4Gvzb846hAFM.yOI9ERjlMR0G/FWpD.",
+      "email": "souroush@gmail.com",
+      "phonenumber": "09124457788",
+      "fullname": "سروش حاتمی",
+      "isBanned": false,
+      "purchasedCourses": []
+    },
+    {
+      "id": "40a14cde-b0ea-413c-b3dc-3ee3822492f4",
+      "username": "taher",
+      "password": "$2b$10$v5t20NLc4PqKQJV.mf0Uh.eBeC925diD0AfENAA.jS5eazHDlRU5a",
+      "email": "Taher@gmail.com",
+      "phonenumber": "09334557788",
+      "fullname": "طاهر مستوفی",
+      "isBanned": false,
+      "purchasedCourses": []
+    },
+    {
+      "id": "a443ecd7-f234-451d-ac49-5a008dccff2c",
+      "username": "Fadia",
+      "password": "$2b$10$Xptf6dQ8OjypSjrUd08L3uaTcQVNId/fDCLjTfflAEjiiHFnhWfz2",
+      "email": "Fadia@gmail.com",
+      "phonenumber": "09378815466",
+      "fullname": "فادیا سلمانی",
+      "isBanned": false,
+      "purchasedCourses": []
+    },
+    {
+      "userId": "e9c137d0-8259-4c1e-b97f-8eb33a0b33e5",
+      "role": "admin",
+      "id": "vpTc7XQ"
     }
   ],
   "courses": [
     {
-      "id": "c1",
+      "id": "31b8bc1d-ea36-43e5-a4f9-09cc54b4950b",
       "title": "React JS",
       "slug": "react-js",
       "description": "دوره کامل React از مقدماتی تا پیشرفته",
-      "image": "/uploads/courses/ee24a75c-48b1-4f86-9372-3f8ef86dd8fb.jpg",
+      "image": "https://ucarecdn.com/3b5ddcf4-46cf-41af-9325-e5754c6a33cd/",
       "details": "React Js Course",
-      "teacherId": "93999795-8e53-4e84-8784-a988ac0d399c",
+      "teacherId": "5c0d2927-1d7c-4e70-b89c-a79cd94e1df1",
       "price": 2500000,
       "duration": 30,
       "studentsCount": 150,
       "isSupport": true,
       "createdAt": "2025-02-01T10:00:00Z",
-      "sessions": ["s1", "s2", "s3", "s4"]
+      "sessions": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
     },
     {
-      "id": "c2",
+      "id": "cc09bdcb-c445-4ac0-a5cf-dd9ea4eac783",
       "title": "Node JS",
       "slug": "node-js",
       "description": "دوره جامع Node.js و Express",
-      "image": "",
+      "image": "https://ucarecdn.com/041f0c63-07ed-4abb-951c-61ab167323ea/",
       "details": "Node Js Course",
-      "teacherId": "u3",
+      "teacherId": "1ecf7054-d3a5-443b-86dc-df8b3c9db4a1",
       "price": 3000000,
       "duration": 40,
       "studentsCount": 120,
       "isSupport": true,
       "createdAt": "2025-02-05T11:00:00Z",
-      "sessions": ["s5", "s6", "s7"]
+      "sessions": [
+        "s5",
+        "s6",
+        "s7"
+      ]
     },
     {
-      "id": "c3",
+      "id": "cc446b24-f061-4741-b5b4-7d1c695d8f1e",
       "title": "Python Django",
       "slug": "python-django",
       "description": "دوره کامل توسعه وب با Django",
-      "image": "",
+      "image": "https://ucarecdn.com/9bfdd1cc-173f-492d-a7fc-95f308f3809a/",
       "details": "Python Django Course",
-      "teacherId": "u4",
+      "teacherId": "fe95c15a-dbee-4baf-a70e-1e3d0d20c3b3",
       "price": 2800000,
       "duration": 35,
       "studentsCount": 100,
       "isSupport": true,
       "createdAt": "2025-02-10T12:00:00Z",
-      "sessions": ["s8", "s9"]
+      "sessions": [
+        "s8",
+        "s9"
+      ]
     },
     {
-      "id": "c4",
+      "id": "e8fa04fb-fd0e-46f2-bb43-955a968e712b",
       "title": "Vue JS",
       "slug": "vue-js",
       "description": "دوره پیشرفته Vue.js",
-      "image": "",
+      "image": "https://ucarecdn.com/94b34a26-7ab8-4694-8100-4f0160cb4bf5/",
       "details": "Vue Js Course",
-      "teacherId": "u5",
+      "teacherId": "4a712055-05ff-4c5a-80f0-786f0b3d9b20",
       "price": 2200000,
       "duration": 25,
       "studentsCount": 90,
       "isSupport": true,
       "createdAt": "2025-02-15T13:00:00Z",
-      "sessions": ["s10", "s11", "s12"]
+      "sessions": [
+        "s10",
+        "s11",
+        "s12"
+      ]
     },
     {
-      "id": "c5",
+      "id": "46cd7e50-724b-42c4-b03a-6087c55c6328",
       "title": "React Native",
       "slug": "react-native",
       "description": "دوره ساخت اپلیکیشن موبایل",
-      "image": "",
+      "image": "https://ucarecdn.com/cc7c0def-8cc8-4a87-ba91-e4947b701ec2/",
       "details": "React Native Course",
-      "teacherId": "u6",
+      "teacherId": "7f06f8fd-225e-4e8c-9249-75b021b897ec",
       "price": 3500000,
       "duration": 45,
       "studentsCount": 80,
       "isSupport": true,
       "createdAt": "2025-02-20T14:00:00Z",
-      "sessions": ["s13", "s14", "s15"]
+      "sessions": [
+        "s13",
+        "s14",
+        "s15"
+      ]
     },
     {
-      "id": "c6",
+      "id": "501fa59c-8d67-4273-b1e5-a5fcd9056e47",
       "title": "JavaScript پیشرفته",
       "slug": "advanced-js",
       "description": "آموزش مفاهیم پیشرفته جاوااسکریپت",
-      "image": "",
+      "image": "https://ucarecdn.com/316d70fe-6f34-4d46-a73d-361a858d816c/",
       "details": "Advance js Course",
-      "teacherId": "u2",
+      "teacherId": "3a6a380e-0c0d-4f4e-9b1f-4692d1c8b34b",
       "price": 2000000,
       "duration": 20,
       "studentsCount": 200,
       "isSupport": true,
       "createdAt": "2025-03-01T15:00:00Z",
-      "sessions": ["s16", "s17"]
+      "sessions": [
+        "s16",
+        "s17"
+      ]
     },
     {
-      "id": "c7",
+      "id": "b24905e6-2a14-4042-a790-0fe5d9476db2",
       "title": "TypeScript",
       "slug": "typescript",
       "description": "دوره کامل TypeScript",
-      "image": "",
+      "image": "https://ucarecdn.com/634f861b-1e21-4f0c-9b8d-b53121c65a94/",
       "details": "TypeScript Course",
-      "teacherId": "93999795-8e53-4e84-8784-a988ac0d399c",
+      "teacherId": "bd47d2f6-c4b1-47d0-8c46-b5be17796aa1",
       "price": 1800000,
       "duration": 18,
       "studentsCount": 150,
       "isSupport": true,
       "createdAt": "2025-03-05T16:00:00Z",
-      "sessions": ["s18", "s19", "s20"]
+      "sessions": [
+        "s18",
+        "s19",
+        "s20"
+      ]
     },
     {
-      "id": "c8",
+      "id": "eb9a69ed-a9fc-4b63-987b-e657a5fa7496",
       "title": "MongoDB",
       "slug": "mongodb",
       "description": "آموزش پایگاه داده NoSQL",
-      "image": "",
+      "image": "https://ucarecdn.com/9e0f54bb-2f20-44ce-a565-e9c71928ca7f/",
       "details": "No SQL Course",
-      "teacherId": "u4",
+      "teacherId": "f6a43c34-cc93-4c7c-bb7e-370c3a2c4ff9",
       "price": 1500000,
       "duration": 15,
       "studentsCount": 120,
       "isSupport": true,
       "createdAt": "2025-03-10T17:00:00Z",
-      "sessions": ["s21", "s22"]
+      "sessions": [
+        "s21",
+        "s22"
+      ]
     },
     {
-      "id": "c9",
+      "id": "d9bbb2f2-26d3-4a28-a943-19eb81e60958",
       "title": "Docker",
       "slug": "docker",
       "description": "آموزش کانتینریزاسیون با Docker",
-      "image": "",
+      "image": "https://ucarecdn.com/8e48d09b-76ae-4b4f-8d6c-66bbff08223b/",
       "details": "Docker Course",
-      "teacherId": "u5",
+      "teacherId": "de0a9df5-92de-43a5-96d1-f36b00f74f19",
       "price": 2400000,
       "duration": 22,
       "studentsCount": 100,
       "isSupport": true,
       "createdAt": "2025-03-15T18:00:00Z",
-      "sessions": ["s23", "s24", "s25"]
+      "sessions": [
+        "s23",
+        "s24",
+        "s25"
+      ]
     },
     {
-      "id": "c10",
+      "id": "61b91f5e-f071-435b-a956-572dc0011a4a",
       "title": "GraphQL",
       "slug": "graphql",
       "description": "دوره کامل GraphQL",
-      "image": "",
+      "image": "https://ucarecdn.com/c7b59826-3fb5-4e6e-9380-ab93dfced823/",
       "details": "Graph Ql Course",
-      "teacherId": "u6",
+      "teacherId": "a26c4e39-d13f-4e94-bc94-76b12fc6d5bc",
       "price": 2100000,
       "duration": 20,
       "studentsCount": 90,
       "isSupport": true,
       "createdAt": "2025-03-20T19:00:00Z",
-      "sessions": ["s26", "s27"]
+      "sessions": [
+        "s26",
+        "s27"
+      ]
     },
     {
-      "id": "c11",
+      "id": "020d41dd-173c-46e3-a9d2-245efbf89161",
       "title": "Next.js",
       "slug": "next-js",
       "description": "دوره جامع Next.js",
-      "image": "",
+      "image": "https://ucarecdn.com/1317ce5f-f46f-4f53-b3c1-4888794d9e1b/",
       "details": "Next Js Course",
-      "teacherId": "u2",
+      "teacherId": "7b770ce5-2a1e-48a6-b20d-fec6ac1214e0",
       "price": 2700000,
       "duration": 28,
       "studentsCount": 110,
       "isSupport": true,
       "createdAt": "2025-04-01T20:00:00Z",
-      "sessions": ["s28", "s29", "s30"]
+      "sessions": [
+        "s28",
+        "s29",
+        "s30"
+      ]
     },
     {
-      "id": "c12",
+      "id": "c7c5350c-eca5-4226-bc98-aa571df106a3",
       "title": "NestJS",
       "slug": "nestjs",
       "description": "دوره پیشرفته NestJS",
-      "teacherId": "u3",
-      "image": "",
+      "teacherId": "0eae20f6-8b84-493b-8b5f-39cd3fe8fd32",
+      "image": "https://ucarecdn.com/36f9c40f-6457-41be-93d1-0a10edfff970/",
       "details": "Nest Js Course",
       "price": 2900000,
       "duration": 30,
       "studentsCount": 95,
       "isSupport": true,
       "createdAt": "2025-04-05T21:00:00Z",
-      "sessions": ["s31", "s32"]
+      "sessions": [
+        "s31",
+        "s32"
+      ]
     },
     {
-      "id": "c13",
+      "id": "5b849684-b46d-4d5c-a13b-f535ead82eff",
       "title": "Flutter",
       "slug": "flutter",
       "description": "دوره ساخت اپلیکیشن موبایل با Flutter",
-      "image": "",
+      "image": "https://ucarecdn.com/c155c35c-0ac2-41ec-9c7c-3ac38d6add55/",
       "details": "Flutter Course",
-      "teacherId": "d594fd52-3c68-42a7-a30c-f7c7bbaa4802",
+      "teacherId": "e8b20c1e-2a49-44f4-b73f-7b80441aabde",
       "price": 3200000,
       "duration": 35,
       "studentsCount": 85,
       "isSupport": true,
       "createdAt": "2025-04-10T22:00:00Z",
-      "sessions": ["s33", "s34", "s35"]
+      "sessions": [
+        "s33",
+        "s34",
+        "s35"
+      ]
     },
     {
-      "id": "c14",
+      "id": "b669682d-24fa-46ad-a698-7c462857a6f9",
       "title": "Svelte",
       "slug": "svelte",
       "description": "آموزش فریمورک Svelte",
-      "image": "",
+      "image": "https://ucarecdn.com/192d54e9-4468-45ab-8046-3e29f5da518d/",
       "details": "Svelte Course",
-      "teacherId": "u5",
+      "teacherId": "d2aaeb00-5278-4765-a49a-bf7c8cc38c83",
       "price": 1900000,
       "duration": 18,
       "studentsCount": 70,
       "isSupport": true,
       "createdAt": "2025-04-15T23:00:00Z",
-      "sessions": ["s36", "s37"]
+      "sessions": [
+        "s36",
+        "s37"
+      ]
     },
     {
-      "id": "c15",
+      "id": "d057a7a2-348e-401d-80c7-a141d41e7c07",
       "title": "Kubernetes",
       "slug": "kubernetes",
       "description": "آموزش اورکستراسیون کانتینرها",
-      "teacherId": "u6",
+      "teacherId": "f5b26932-3cfc-4cb6-a88e-f3cb46091acb",
       "details": "Kubernetes Course",
       "price": 3600000,
       "duration": 40,
       "studentsCount": 75,
-      "image": "",
+      "image": "https://ucarecdn.com/7a50fb61-9f4c-407a-976c-27fb18e7c2e5/",
       "isSupport": true,
       "createdAt": "2025-04-20T00:00:00Z",
-      "sessions": ["s38", "s39", "s40"]
+      "sessions": [
+        "s38",
+        "s39",
+        "s40"
+      ]
     }
   ],
   "sessions": [
     {
       "id": "s1",
-      "courseId": "c1",
+      "courseId": "31b8bc1d-ea36-43e5-a4f9-09cc54b4950b",
       "title": "معرفی دوره React",
       "order": 1,
       "videos": [
@@ -357,7 +460,7 @@
     },
     {
       "id": "s2",
-      "courseId": "c1",
+      "courseId": "31b8bc1d-ea36-43e5-a4f9-09cc54b4950b",
       "title": "مبانی React",
       "order": 2,
       "videos": [
@@ -371,7 +474,7 @@
     },
     {
       "id": "s3",
-      "courseId": "c1",
+      "courseId": "31b8bc1d-ea36-43e5-a4f9-09cc54b4950b",
       "title": "Hooks در React",
       "order": 3,
       "videos": [
@@ -385,7 +488,7 @@
     },
     {
       "id": "s4",
-      "courseId": "c1",
+      "courseId": "31b8bc1d-ea36-43e5-a4f9-09cc54b4950b",
       "title": "Routing در React",
       "order": 4,
       "videos": [
@@ -399,7 +502,7 @@
     },
     {
       "id": "s5",
-      "courseId": "c2",
+      "courseId": "cc09bdcb-c445-4ac0-a5cf-dd9ea4eac783",
       "title": "معرفی Node.js",
       "order": 1,
       "videos": [
@@ -414,7 +517,7 @@
     },
     {
       "id": "s6",
-      "courseId": "c2",
+      "courseId": "cc09bdcb-c445-4ac0-a5cf-dd9ea4eac783",
       "title": "Express.js",
       "order": 2,
       "videos": [
@@ -428,7 +531,7 @@
     },
     {
       "id": "s7",
-      "courseId": "c2",
+      "courseId": "cc09bdcb-c445-4ac0-a5cf-dd9ea4eac783",
       "title": "Middleware در Express",
       "order": 3,
       "videos": [
@@ -442,7 +545,7 @@
     },
     {
       "id": "s8",
-      "courseId": "c3",
+      "courseId": "cc446b24-f061-4741-b5b4-7d1c695d8f1e",
       "title": "معرفی Django",
       "order": 1,
       "videos": [
@@ -457,7 +560,7 @@
     },
     {
       "id": "s9",
-      "courseId": "c3",
+      "courseId": "cc446b24-f061-4741-b5b4-7d1c695d8f1e",
       "title": "مدل‌ها در Django",
       "order": 2,
       "videos": [
@@ -471,7 +574,7 @@
     },
     {
       "id": "s10",
-      "courseId": "c4",
+      "courseId": "e8fa04fb-fd0e-46f2-bb43-955a968e712b",
       "title": "معرفی Vue.js",
       "order": 1,
       "videos": [
@@ -486,7 +589,7 @@
     },
     {
       "id": "s11",
-      "courseId": "c4",
+      "courseId": "e8fa04fb-fd0e-46f2-bb43-955a968e712b",
       "title": "Components در Vue",
       "order": 2,
       "videos": [
@@ -500,7 +603,7 @@
     },
     {
       "id": "s12",
-      "courseId": "c4",
+      "courseId": "e8fa04fb-fd0e-46f2-bb43-955a968e712b",
       "title": "Vue Router",
       "order": 3,
       "videos": [
@@ -514,7 +617,7 @@
     },
     {
       "id": "s13",
-      "courseId": "c5",
+      "courseId": "46cd7e50-724b-42c4-b03a-6087c55c6328",
       "title": "معرفی React Native",
       "order": 1,
       "videos": [
@@ -529,7 +632,7 @@
     },
     {
       "id": "s14",
-      "courseId": "c5",
+      "courseId": "46cd7e50-724b-42c4-b03a-6087c55c6328",
       "title": "کامپوننت‌های اصلی",
       "order": 2,
       "videos": [
@@ -543,7 +646,7 @@
     },
     {
       "id": "s15",
-      "courseId": "c5",
+      "courseId": "46cd7e50-724b-42c4-b03a-6087c55c6328",
       "title": "Navigation در React Native",
       "order": 3,
       "videos": [
@@ -557,7 +660,7 @@
     },
     {
       "id": "s16",
-      "courseId": "c6",
+      "courseId": "501fa59c-8d67-4273-b1e5-a5fcd9056e47",
       "title": "Closures در JavaScript",
       "order": 1,
       "videos": [
@@ -572,7 +675,7 @@
     },
     {
       "id": "s17",
-      "courseId": "c6",
+      "courseId": "501fa59c-8d67-4273-b1e5-a5fcd9056e47",
       "title": "Prototype و Inheritance",
       "order": 2,
       "videos": [
@@ -586,7 +689,7 @@
     },
     {
       "id": "s18",
-      "courseId": "c7",
+      "courseId": "b24905e6-2a14-4042-a790-0fe5d9476db2",
       "title": "معرفی TypeScript",
       "order": 1,
       "videos": [
@@ -601,7 +704,7 @@
     },
     {
       "id": "s19",
-      "courseId": "c7",
+      "courseId": "b24905e6-2a14-4042-a790-0fe5d9476db2",
       "title": "Types در TypeScript",
       "order": 2,
       "videos": [
@@ -615,7 +718,7 @@
     },
     {
       "id": "s20",
-      "courseId": "c7",
+      "courseId": "b24905e6-2a14-4042-a790-0fe5d9476db2",
       "title": "Interfaces در TypeScript",
       "order": 3,
       "videos": [
@@ -629,7 +732,7 @@
     },
     {
       "id": "s21",
-      "courseId": "c8",
+      "courseId": "eb9a69ed-a9fc-4b63-987b-e657a5fa7496",
       "title": "معرفی MongoDB",
       "order": 1,
       "videos": [
@@ -644,7 +747,7 @@
     },
     {
       "id": "s22",
-      "courseId": "c8",
+      "courseId": "eb9a69ed-a9fc-4b63-987b-e657a5fa7496",
       "title": "CRUD در MongoDB",
       "order": 2,
       "videos": [
@@ -658,7 +761,7 @@
     },
     {
       "id": "s23",
-      "courseId": "c9",
+      "courseId": "d9bbb2f2-26d3-4a28-a943-19eb81e60958",
       "title": "معرفی Docker",
       "order": 1,
       "videos": [
@@ -673,7 +776,7 @@
     },
     {
       "id": "s24",
-      "courseId": "c9",
+      "courseId": "d9bbb2f2-26d3-4a28-a943-19eb81e60958",
       "title": "Dockerfile",
       "order": 2,
       "videos": [
@@ -687,7 +790,7 @@
     },
     {
       "id": "s25",
-      "courseId": "c9",
+      "courseId": "d9bbb2f2-26d3-4a28-a943-19eb81e60958",
       "title": "Docker Compose",
       "order": 3,
       "videos": [
@@ -716,7 +819,7 @@
     },
     {
       "id": "s27",
-      "courseId": "c10",
+      "courseId": "c61b91f5e-f071-435b-a956-572dc0011a4a",
       "title": "Schema در GraphQL",
       "order": 2,
       "videos": [
@@ -730,7 +833,7 @@
     },
     {
       "id": "s28",
-      "courseId": "c11",
+      "courseId": "020d41dd-173c-46e3-a9d2-245efbf89161",
       "title": "معرفی Next.js",
       "order": 1,
       "videos": [
@@ -745,7 +848,7 @@
     },
     {
       "id": "s29",
-      "courseId": "c11",
+      "courseId": "020d41dd-173c-46e3-a9d2-245efbf89161",
       "title": "Routing در Next.js",
       "order": 2,
       "videos": [
@@ -759,7 +862,7 @@
     },
     {
       "id": "s30",
-      "courseId": "c11",
+      "courseId": "020d41dd-173c-46e3-a9d2-245efbf89161",
       "title": "SSR و SSG",
       "order": 3,
       "videos": [
@@ -773,7 +876,7 @@
     },
     {
       "id": "s31",
-      "courseId": "c12",
+      "courseId": "c7c5350c-eca5-4226-bc98-aa571df106a3",
       "title": "معرفی NestJS",
       "order": 1,
       "videos": [
@@ -788,7 +891,7 @@
     },
     {
       "id": "s32",
-      "courseId": "c12",
+      "courseId": "c7c5350c-eca5-4226-bc98-aa571df106a3",
       "title": "Modules در NestJS",
       "order": 2,
       "videos": [
@@ -802,7 +905,7 @@
     },
     {
       "id": "s33",
-      "courseId": "c13",
+      "courseId": "5b849684-b46d-4d5c-a13b-f535ead82eff",
       "title": "معرفی Flutter",
       "order": 1,
       "videos": [
@@ -817,7 +920,7 @@
     },
     {
       "id": "s34",
-      "courseId": "c13",
+      "courseId": "5b849684-b46d-4d5c-a13b-f535ead82eff",
       "title": "Widgets در Flutter",
       "order": 2,
       "videos": [
@@ -831,7 +934,7 @@
     },
     {
       "id": "s35",
-      "courseId": "c13",
+      "courseId": "5b849684-b46d-4d5c-a13b-f535ead82eff",
       "title": "State Management",
       "order": 3,
       "videos": [
@@ -845,7 +948,7 @@
     },
     {
       "id": "s36",
-      "courseId": "c14",
+      "courseId": "b669682d-24fa-46ad-a698-7c462857a6f9",
       "title": "معرفی Svelte",
       "order": 1,
       "videos": [
@@ -860,7 +963,7 @@
     },
     {
       "id": "s37",
-      "courseId": "c14",
+      "courseId": "b669682d-24fa-46ad-a698-7c462857a6f9",
       "title": "Components در Svelte",
       "order": 2,
       "videos": [
@@ -874,7 +977,7 @@
     },
     {
       "id": "s38",
-      "courseId": "c15",
+      "courseId": "d057a7a2-348e-401d-80c7-a141d41e7c07",
       "title": "معرفی Kubernetes",
       "order": 1,
       "videos": [
@@ -889,7 +992,7 @@
     },
     {
       "id": "s39",
-      "courseId": "c15",
+      "courseId": "d057a7a2-348e-401d-80c7-a141d41e7c07",
       "title": "Pods و Deployments",
       "order": 2,
       "videos": [
@@ -904,26 +1007,199 @@
   ],
   "teachers": [
     {
-      "id": "93999795-8e53-4e84-8784-a988ac0d399c",
+      "id": "5c0d2927-1d7c-4e70-b89c-a79cd94e1df1",
       "username": "hojjat",
-      "password": "$2b$10$tneKUL.EytU8OUSuKxPxXeC.1D166.EKXUCTaUfny08DFXUS5FlS6",
+      "password": "$2b$12$HLcvE9o0J9Yvduyjxar2ReZWeMCBt1AAzw0KEI6qrvv5hlVD4AOQu",
       "email": "hojjat@example.com",
       "phonenumber": "09123456789",
       "fullname": "حجت ترابی",
-      "courseIds": ["c1", "c7"],
+      "courseIds": [
+        "31b8bc1d-ea36-43e5-a4f9-09cc54b4950b"
+      ],
       "stack": "فرانت اند",
       "isBanned": false
     },
     {
-      "id": "d594fd52-3c68-42a7-a30c-f7c7bbaa4802",
-      "username": "shahin",
-      "password": "$2b$10$.XdIIrXQs2khnLcX/P1NmOPifEo7J9W9X9R5EUNF.5/m4ccauwheC",
-      "email": "shahin@gmail.com",
-      "phonenumber": "09341123456",
-      "fullname": "شاهین احمدی",
-      "isBanned": false,
-      "courseIds": ["c13"],
-      "stack": "برنامه نویس موبایل"
+      "id": "1ecf7054-d3a5-443b-86dc-df8b3c9db4a1",
+      "username": "maryam",
+      "password": "$2b$12$fiyb7fTQ6BdnK69yojLbaeU0z0m/wYxRWc2Hc491XR0hK/xUy2p6C",
+      "email": "maryam@example.com",
+      "phonenumber": "09121231231",
+      "fullname": "مریم رضایی",
+      "courseIds": [
+        "b24905e6-2a14-4042-a790-0fe5d9476db2"
+      ],
+      "stack": "بک‌اند",
+      "isBanned": false
+    },
+    {
+      "id": "fe95c15a-dbee-4baf-a70e-1e3d0d20c3b3",
+      "username": "alireza",
+      "password": "$2b$12$dEe7Ta1gZOqvLKc.vSeINujWFXdGWcvIBLgWnIEt7mSB6SwvQBije",
+      "email": "alireza@example.com",
+      "phonenumber": "09351231231",
+      "fullname": "علیرضا حیدری",
+      "courseIds": [
+        "f0125f1b-c37d-465a-b595-4ae6c2eb68a1"
+      ],
+      "stack": "فرانت اند",
+      "isBanned": false
+    },
+    {
+      "id": "4a712055-05ff-4c5a-80f0-786f0b3d9b20",
+      "username": "neda!2233",
+      "password": "$2b$12$N9CoiV7gjnjhRsJ57JSyFO8.LKYlaauR6FiXUBURda35Fb7YJqd3W",
+      "email": "neda@example.com",
+      "phonenumber": "09393459876",
+      "fullname": "ندا مرادی",
+      "courseIds": [
+        "be15f25b-6f7d-4ee6-bda1-3f567749f91b"
+      ],
+      "stack": "فرانت اند",
+      "isBanned": false
+    },
+    {
+      "id": "7f06f8fd-225e-4e8c-9249-75b021b897ec",
+      "username": "kian&5588",
+      "password": "$2b$12$JjGwyr3viA5crSpNWvWV4.SVXmDqhQA3.lq9a5kB8XtC0LFecztq.",
+      "email": "kian@example.com",
+      "phonenumber": "09129876543",
+      "fullname": "کیان ابراهیمی",
+      "courseIds": [
+        "9c57d3f3-9c90-49fd-89df-78c3efcf0ef4"
+      ],
+      "stack": "بک‌اند",
+      "isBanned": false
+    },
+    {
+      "id": "3a6a380e-0c0d-4f4e-9b1f-4692d1c8b34b",
+      "username": "parisa",
+      "password": "$2b$12$1u0S/I8b0k1cj5OSLvR6Zu/a6Jx.WgdqZSj4D7.tIvIUekweE1PTO",
+      "email": "parisa@example.com",
+      "phonenumber": "09219876543",
+      "fullname": "پریسا سلطانی",
+      "courseIds": [
+        "ad6db372-6573-4de6-8937-0a11f9de78f3"
+      ],
+      "stack": "فرانت اند",
+      "isBanned": false
+    },
+    {
+      "id": "bd47d2f6-c4b1-47d0-8c46-b5be17796aa1",
+      "username": "amirreza",
+      "password": "$2b$12$yAgAviJ9kCxj2/sR1QScfu4giQlzgbtJAv710AIXt1uO2d/ZbeMDS",
+      "email": "amirreza@example.com",
+      "phonenumber": "09121239999",
+      "fullname": "امیررضا نیک‌فر",
+      "courseIds": [
+        "c0248f27-ef33-45f0-9bb5-d3ab49079016"
+      ],
+      "stack": "فرانت اند",
+      "isBanned": false
+    },
+    {
+      "id": "f6a43c34-cc93-4c7c-bb7e-370c3a2c4ff9",
+      "username": "shiva",
+      "password": "$2b$12$/exEGfHACPGXE9o5FUkwa.B4Ao.WU/FFU5.X.V69eBTyRKTFSxCuy",
+      "email": "shiva@example.com",
+      "phonenumber": "09125551234",
+      "fullname": "شیوا دهقان",
+      "courseIds": [
+        "0ee75fbb-dc40-44b4-899e-0891e2eb1140"
+      ],
+      "stack": "بک‌اند",
+      "isBanned": false
+    },
+    {
+      "id": "de0a9df5-92de-43a5-96d1-f36b00f74f19",
+      "username": "vahid",
+      "password": "$2b$12$ecrWk.rdJQfs/qOmv.p2O.KZn2S.7s3P8bAYKSCofkPzuIqU8pEmK",
+      "email": "vahid@example.com",
+      "phonenumber": "09121112222",
+      "fullname": "وحید سلیمانی",
+      "courseIds": [
+        "3bd90c78-3908-4b8d-84b1-c0ad82457b20"
+      ],
+      "stack": "فرانت اند",
+      "isBanned": false
+    },
+    {
+      "id": "a26c4e39-d13f-4e94-bc94-76b12fc6d5bc",
+      "username": "mina^9633",
+      "password": "$2b$12$hfe43f8u2MP3zMctiOTWr.WrTmh6o9tTBbOJ.1rFb8Vzq5U1r1Z22",
+      "email": "mina@example.com",
+      "phonenumber": "09129998888",
+      "fullname": "مینا باقری",
+      "courseIds": [
+        "994b86f0-2f87-490e-a345-6fa15f12f5f7"
+      ],
+      "stack": "بک‌اند",
+      "isBanned": false
+    },
+    {
+      "id": "7b770ce5-2a1e-48a6-b20d-fec6ac1214e0",
+      "username": "saeed",
+      "password": "$2b$12$FIw2TelmTMN78dzWYRX.8OZB2OTBIRdUtYzp.PbD9u.iRaCQaZSVy",
+      "email": "saeed@example.com",
+      "phonenumber": "09121110000",
+      "fullname": "سعید براتی",
+      "courseIds": [
+        "8db7cf76-3140-4bdf-92c4-60dd790d6eec"
+      ],
+      "stack": "فرانت اند",
+      "isBanned": false
+    },
+    {
+      "id": "0eae20f6-8b84-493b-8b5f-39cd3fe8fd32",
+      "username": "bahar",
+      "password": "$2b$12$s8A0KIHzzdW/WyGRfWkH0eye5XJoX9hGGMvzl/TtL.Ww6csDwc1Qe",
+      "email": "bahar@example.com",
+      "phonenumber": "09124567890",
+      "fullname": "بهار شفیعی",
+      "courseIds": [
+        "b19f1cb7-0c67-4c4a-a1bc-9014eb6bd6c1"
+      ],
+      "stack": "بک‌اند",
+      "isBanned": false
+    },
+    {
+      "id": "e8b20c1e-2a49-44f4-b73f-7b80441aabde",
+      "username": "ramin",
+      "password": "$2b$12$j03.7CLyul6nmmWLa0IsTeYVqAKN1fTAJUfegBXYx0h5iaDCQtfyi",
+      "email": "ramin@example.com",
+      "phonenumber": "09127773333",
+      "fullname": "رامین صمدی",
+      "courseIds": [
+        "beaa50b1-ec27-40e6-bc15-6639c14b45c9"
+      ],
+      "stack": "فرانت اند",
+      "isBanned": false
+    },
+    {
+      "id": "d2aaeb00-5278-4765-a49a-bf7c8cc38c83",
+      "username": "tannaz",
+      "password": "$2b$12$Bx6ahpXJqJFiMy5kZo76v.BdHd.uQLrhESEtJ48LMvxMjAlkm/qem",
+      "email": "tannaz@example.com",
+      "phonenumber": "09127894561",
+      "fullname": "تناز رستمی",
+      "courseIds": [
+        "e34f857e-20a9-4e96-9e54-2d7e08a4a9cd"
+      ],
+      "stack": "بک‌اند",
+      "isBanned": false
+    },
+    {
+      "id": "f5b26932-3cfc-4cb6-a88e-f3cb46091acb",
+      "username": "armin",
+      "password": "$2b$12$RsCQCyZbkgXTWTWRXXhcR.r1866UjgvSKRgnTAvE6QUtZ3iQXdX.G",
+      "email": "armin@example.com",
+      "phonenumber": "09129997777",
+      "fullname": "آرمین حسینی",
+      "courseIds": [
+        "44c5454d-74b0-466b-a46a-82a8c4d93f70"
+      ],
+      "stack": "فرانت اند",
+      "isBanned": false
     }
   ]
 }
