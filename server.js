@@ -254,7 +254,6 @@ server.post("/login", async (req, res) => {
   }
 });
 
-
 /**
  * @api {post} /refresh-token ساخت توکن جدید از اطلاعات قبلی
  * @apiBody {String} userId شناسه کاربر
@@ -293,6 +292,8 @@ server.post("/refresh-token", (req, res) => {
 
   res.json({ token: newToken });
 });
+
+
 
 /**
  * @api {post} /forgot-password بازیابی رمز عبور
