@@ -185,6 +185,7 @@ server.post("/register", async (req, res) => {
       .push({
         ...newAccount,
         purchasedCourses: [],
+        cart : []
       })
       .write();
   }
@@ -193,6 +194,121 @@ server.post("/register", async (req, res) => {
     message: "ثبت‌نام موفق",
     userId: newAccount.id,
     role,
+  });
+});
+
+/**
+ * @api {get} /cart دریافت سبد خرید کاربر
+ * @apiHeader {String} Authorization توکن کاربر
+ */
+server.get("/cart", (req, res) => {
+  const userId = req.user.userId; // از توکن احراز هویت استخراج می‌شود
+  const db = router.db;
+
+  const user = db.get("users").find({ id: userId }).value();
+  if (!user) {
+    return res.status(404).json({ error: "کاربر یافت نشد" });
+  }
+
+  // دریافت اطلاعات کامل دوره‌های موجود در سبد خرید
+  const cartItems = db
+    .get("courses")
+    .filter((course) => user.cart?.includes(course.id))
+    .value();
+
+  res.json({
+    cart: cartItems,
+  });
+});
+
+/**
+ * @api {post} /cart/add اضافه کردن دوره به سبد خرید
+ * @apiHeader {String} Authorization توکن کاربر
+ * @apiBody {String} courseId شناسه دوره
+ */
+server.post("/cart/add", (req, res) => {
+  const userId = req.user.userId;
+  const { courseId } = req.body;
+  const db = router.db;
+
+  if (!courseId) {
+    return res.status(400).json({ error: "شناسه دوره الزامی است" });
+  }
+
+  const user = db.get("users").find({ id: userId }).value();
+  if (!user) {
+    return res.status(404).json({ error: "کاربر یافت نشد" });
+  }
+
+  const course = db.get("courses").find({ id: courseId }).value();
+  if (!course) {
+    return res.status(404).json({ error: "دوره یافت نشد" });
+  }
+
+  // اگر سبد خرید وجود نداشت، ایجاد می‌کنیم
+  if (!user.cart) {
+    user.cart = [];
+  }
+
+  // بررسی آیا دوره قبلاً در سبد خرید وجود دارد
+  if (user.cart.includes(courseId)) {
+    return res.status(400).json({ error: "این دوره قبلاً در سبد خرید شما وجود دارد" });
+  }
+
+  // اضافه کردن دوره به سبد خرید
+  db.get("users")
+    .find({ id: userId })
+    .update("cart", (cart = []) => [...cart, courseId])
+    .write();
+
+  res.json({
+    success: true,
+    message: "دوره به سبد خرید اضافه شد",
+    cart: [...user.cart, courseId],
+  });
+});
+
+/**
+ * @api {post} /cart/remove حذف دوره از سبد خرید
+ * @apiHeader {String} Authorization توکن کاربر
+ * @apiBody {String} courseId شناسه دوره
+ */
+server.post("/cart/remove", (req, res) => {
+  const userId = req.user.userId;
+  const { courseId } = req.body;
+  const db = router.db;
+
+  if (!courseId) {
+    return res.status(400).json({ error: "شناسه دوره الزامی است" });
+  }
+
+  const user = db.get("users").find({ id: userId }).value();
+  if (!user) {
+    return res.status(404).json({ error: "کاربر یافت نشد" });
+  }
+
+  // اگر سبد خرید وجود نداشت یا خالی بود
+  if (!user.cart || user.cart.length === 0) {
+    return res.status(400).json({ error: "سبد خرید شما خالی است" });
+  }
+
+  // بررسی آیا دوره در سبد خرید وجود دارد
+  if (!user.cart.includes(courseId)) {
+    return res.status(400).json({ error: "این دوره در سبد خرید شما وجود ندارد" });
+  }
+
+  // حذف دوره از سبد خرید
+  const updatedCart = user.cart.filter((id) => id !== courseId);
+
+  db.get("users")
+    .find({ id: userId })
+    .assign({ cart: updatedCart })
+    .write();
+
+  res.json({
+    success: true,
+    message: "دوره از سبد خرید حذف شد",
+    cart: updatedCart,
   });
 });
 

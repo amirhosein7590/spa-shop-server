@@ -9,7 +9,8 @@
       "fullname": "امیرحسین غلامی",
       "email": "amirhosein@example.com",
       "isBanned": false,
-      "purchasedCourses": []
+      "purchasedCourses": [],
+      "cart": []
     },
     {
       "id": "83ba20c4-95bf-4559-be67-297af2df7631",
@@ -20,7 +21,8 @@
       "fullname": "علی رضایی",
       "email": "ali@example.com",
       "isBanned": false,
-      "purchasedCourses": []
+      "purchasedCourses": [],
+      "cart": []
     },
     {
       "id": "d142f596-eaf5-4cb9-9ab9-a064ddbc0551",
@@ -34,7 +36,8 @@
       "purchasedCourses": [
         "c1",
         "c7"
-      ]
+      ],
+      "cart": []
     },
     {
       "id": "ba876b9e-3864-4b88-b8fd-9f84cecf7312",
@@ -45,7 +48,8 @@
       "fullname": "رضا محمدی",
       "email": "reza@example.com",
       "isBanned": false,
-      "purchasedCourses": []
+      "purchasedCourses": [],
+      "cart": []
     },
     {
       "id": "02cd0585-ff11-4f52-b09d-8aa291d5c479",
@@ -56,7 +60,8 @@
       "fullname": "مصطفی احمدی",
       "email": "mostafa@example.com",
       "isBanned": false,
-      "purchasedCourses": []
+      "purchasedCourses": [],
+      "cart": []
     },
     {
       "id": "0600e5b9-28c2-4d1c-8fe2-3f09d76b778e",
@@ -67,7 +72,8 @@
       "fullname": "وحید مرادی",
       "email": "vahid@example.com",
       "isBanned": false,
-      "purchasedCourses": []
+      "purchasedCourses": [],
+      "cart": []
     },
     {
       "id": "47c9a918-a046-42ec-bd66-f380c478e3b6",
@@ -78,7 +84,8 @@
       "fullname": "سارا احمدی",
       "email": "sara@example.com",
       "isBanned": false,
-      "purchasedCourses": []
+      "purchasedCourses": [],
+      "cart": []
     },
     {
       "id": "e8d15fb8-cf88-4f17-bc22-9d9a247a4224",
@@ -89,7 +96,8 @@
       "fullname": "محمد حسینی",
       "email": "mohammad@example.com",
       "isBanned": false,
-      "purchasedCourses": []
+      "purchasedCourses": [],
+      "cart": []
     },
     {
       "id": "1f5b75e6-5289-4911-9210-75303ca75598",
@@ -100,7 +108,8 @@
       "fullname": "فاطمه محمدی",
       "email": "fatemeh@example.com",
       "isBanned": false,
-      "purchasedCourses": []
+      "purchasedCourses": [],
+      "cart": []
     },
     {
       "id": "c057a085-f902-4f37-a7ba-ad24c30f2045",
@@ -111,7 +120,8 @@
       "fullname": "سعید معروفی",
       "email": "saeid@gmail.com",
       "isBanned": false,
-      "purchasedCourses": []
+      "purchasedCourses": [],
+      "cart": []
     },
     {
       "id": "631b5011-03d8-4c9b-a3c8-ab3e55644f90",
@@ -121,7 +131,8 @@
       "phonenumber": "09336667744",
       "fullname": "قاسم محمدی",
       "isBanned": false,
-      "purchasedCourses": []
+      "purchasedCourses": [],
+      "cart": []
     },
     {
       "id": "99a30a80-ad0b-45a9-90eb-8e28febfcfc6",
@@ -131,7 +142,8 @@
       "phonenumber": "09124457788",
       "fullname": "سروش حاتمی",
       "isBanned": false,
-      "purchasedCourses": []
+      "purchasedCourses": [],
+      "cart": []
     },
     {
       "id": "40a14cde-b0ea-413c-b3dc-3ee3822492f4",
@@ -141,7 +153,8 @@
       "phonenumber": "09334557788",
       "fullname": "طاهر مستوفی",
       "isBanned": false,
-      "purchasedCourses": []
+      "purchasedCourses": [],
+      "cart": []
     },
     {
       "id": "a443ecd7-f234-451d-ac49-5a008dccff2c",
@@ -151,7 +164,8 @@
       "phonenumber": "09378815466",
       "fullname": "فادیا سلمانی",
       "isBanned": false,
-      "purchasedCourses": []
+      "purchasedCourses": [],
+      "cart": []
     }
   ],
   "courses": [
@@ -161,7 +175,7 @@
       "slug": "react-js",
       "description": "دوره کامل React از مقدماتی تا پیشرفته",
       "image": "https://ucarecdn.com/3b5ddcf4-46cf-41af-9325-e5754c6a33cd/",
-      "icon" : "https://ucarecdn.com/77af7b90-48ca-4e82-ad93-95b1074b2d3f/",
+      "icon": "https://ucarecdn.com/77af7b90-48ca-4e82-ad93-95b1074b2d3f/",
       "details": "React Js Course",
       "teacherId": "5c0d2927-1d7c-4e70-b89c-a79cd94e1df1",
       "price": 2500000,
@@ -182,7 +196,7 @@
       "slug": "node-js",
       "description": "دوره جامع Node.js و Express",
       "image": "https://ucarecdn.com/041f0c63-07ed-4abb-951c-61ab167323ea/",
-      "icon" : "https://ucarecdn.com/3abb588f-8376-4211-ba7e-0605b8b54d66/",
+      "icon": "https://ucarecdn.com/3abb588f-8376-4211-ba7e-0605b8b54d66/",
       "details": "Node Js Course",
       "teacherId": "1ecf7054-d3a5-443b-86dc-df8b3c9db4a1",
       "price": 3000000,
@@ -202,7 +216,7 @@
       "slug": "python-django",
       "description": "دوره کامل توسعه وب با Django",
       "image": "https://ucarecdn.com/9bfdd1cc-173f-492d-a7fc-95f308f3809a/",
-      "icon" : "https://ucarecdn.com/4d8fa705-9ac1-4d40-bb42-363bc4a7ec27/",
+      "icon": "https://ucarecdn.com/4d8fa705-9ac1-4d40-bb42-363bc4a7ec27/",
       "details": "Python Django Course",
       "teacherId": "fe95c15a-dbee-4baf-a70e-1e3d0d20c3b3",
       "price": 2800000,
@@ -221,7 +235,7 @@
       "slug": "vue-js",
       "description": "دوره پیشرفته Vue.js",
       "image": "https://ucarecdn.com/94b34a26-7ab8-4694-8100-4f0160cb4bf5/",
-      "icon" : "https://ucarecdn.com/d7397e61-3735-403c-85b9-6aa3a784cdea/",
+      "icon": "https://ucarecdn.com/d7397e61-3735-403c-85b9-6aa3a784cdea/",
       "details": "Vue Js Course",
       "teacherId": "4a712055-05ff-4c5a-80f0-786f0b3d9b20",
       "price": 2200000,
@@ -241,7 +255,7 @@
       "slug": "react-native",
       "description": "دوره ساخت اپلیکیشن موبایل",
       "image": "https://ucarecdn.com/cc7c0def-8cc8-4a87-ba91-e4947b701ec2/",
-      "icon" : "https://ucarecdn.com/bf48ff14-6492-4e2f-9f23-d9046f61b563/",
+      "icon": "https://ucarecdn.com/bf48ff14-6492-4e2f-9f23-d9046f61b563/",
       "details": "React Native Course",
       "teacherId": "7f06f8fd-225e-4e8c-9249-75b021b897ec",
       "price": 3500000,
@@ -261,7 +275,7 @@
       "slug": "advanced-js",
       "description": "آموزش مفاهیم پیشرفته جاوااسکریپت",
       "image": "https://ucarecdn.com/316d70fe-6f34-4d46-a73d-361a858d816c/",
-      "icon" : "https://ucarecdn.com/17db6cbb-c83d-46ee-9773-b687fb8d93f3/",
+      "icon": "https://ucarecdn.com/17db6cbb-c83d-46ee-9773-b687fb8d93f3/",
       "details": "Advance js Course",
       "teacherId": "3a6a380e-0c0d-4f4e-9b1f-4692d1c8b34b",
       "price": 2000000,
@@ -280,7 +294,7 @@
       "slug": "typescript",
       "description": "دوره کامل TypeScript",
       "image": "https://ucarecdn.com/634f861b-1e21-4f0c-9b8d-b53121c65a94/",
-      "icon" : "https://ucarecdn.com/39c3a983-abb2-4f17-a9e9-62228833af57/",
+      "icon": "https://ucarecdn.com/39c3a983-abb2-4f17-a9e9-62228833af57/",
       "details": "TypeScript Course",
       "teacherId": "bd47d2f6-c4b1-47d0-8c46-b5be17796aa1",
       "price": 1800000,
@@ -300,7 +314,7 @@
       "slug": "mongodb",
       "description": "آموزش پایگاه داده NoSQL",
       "image": "https://ucarecdn.com/9e0f54bb-2f20-44ce-a565-e9c71928ca7f/",
-      "icon" : "https://ucarecdn.com/c80849cd-81d5-4831-ae14-cb528f5c16e8/",
+      "icon": "https://ucarecdn.com/c80849cd-81d5-4831-ae14-cb528f5c16e8/",
       "details": "No SQL Course",
       "teacherId": "f6a43c34-cc93-4c7c-bb7e-370c3a2c4ff9",
       "price": 1500000,
@@ -319,7 +333,7 @@
       "slug": "docker",
       "description": "آموزش کانتینریزاسیون با Docker",
       "image": "https://ucarecdn.com/8e48d09b-76ae-4b4f-8d6c-66bbff08223b/",
-      "icon" : "https://ucarecdn.com/c529b5d8-7e9b-40a3-8163-be37d051d30c/",
+      "icon": "https://ucarecdn.com/c529b5d8-7e9b-40a3-8163-be37d051d30c/",
       "details": "Docker Course",
       "teacherId": "de0a9df5-92de-43a5-96d1-f36b00f74f19",
       "price": 2400000,
@@ -339,7 +353,7 @@
       "slug": "graphql",
       "description": "دوره کامل GraphQL",
       "image": "https://ucarecdn.com/c7b59826-3fb5-4e6e-9380-ab93dfced823/",
-      "icon" : "https://ucarecdn.com/79d6ebe7-e24f-4e45-9b67-e2a3c8fdfca6/",
+      "icon": "https://ucarecdn.com/79d6ebe7-e24f-4e45-9b67-e2a3c8fdfca6/",
       "details": "Graph Ql Course",
       "teacherId": "a26c4e39-d13f-4e94-bc94-76b12fc6d5bc",
       "price": 2100000,
@@ -358,7 +372,7 @@
       "slug": "next-js",
       "description": "دوره جامع Next.js",
       "image": "https://ucarecdn.com/1317ce5f-f46f-4f53-b3c1-4888794d9e1b/",
-      "icon" : "https://ucarecdn.com/b8d9f74d-8788-452b-af96-ddf8d375f3b7/",
+      "icon": "https://ucarecdn.com/b8d9f74d-8788-452b-af96-ddf8d375f3b7/",
       "details": "Next Js Course",
       "teacherId": "7b770ce5-2a1e-48a6-b20d-fec6ac1214e0",
       "price": 2700000,
@@ -379,7 +393,7 @@
       "description": "دوره پیشرفته NestJS",
       "teacherId": "0eae20f6-8b84-493b-8b5f-39cd3fe8fd32",
       "image": "https://ucarecdn.com/36f9c40f-6457-41be-93d1-0a10edfff970/",
-      "icon" : "https://ucarecdn.com/b6eeae4c-2d75-4161-a9e6-9abac98ab4dc/",
+      "icon": "https://ucarecdn.com/b6eeae4c-2d75-4161-a9e6-9abac98ab4dc/",
       "details": "Nest Js Course",
       "price": 2900000,
       "duration": 30,
@@ -397,7 +411,7 @@
       "slug": "flutter",
       "description": "دوره ساخت اپلیکیشن موبایل با Flutter",
       "image": "https://ucarecdn.com/c155c35c-0ac2-41ec-9c7c-3ac38d6add55/",
-      "icon" : "https://ucarecdn.com/e0fbb342-7f7e-4bec-bcfa-7962cb9e321b/",
+      "icon": "https://ucarecdn.com/e0fbb342-7f7e-4bec-bcfa-7962cb9e321b/",
       "details": "Flutter Course",
       "teacherId": "e8b20c1e-2a49-44f4-b73f-7b80441aabde",
       "price": 3200000,
@@ -417,10 +431,10 @@
       "slug": "svelte",
       "description": "آموزش فریمورک Svelte",
       "image": "https://ucarecdn.com/192d54e9-4468-45ab-8046-3e29f5da518d/",
-      "icon" : "https://ucarecdn.com/a4122dde-dc18-4b69-8a7e-3f0cfe84d5b8/",
+      "icon": "https://ucarecdn.com/a4122dde-dc18-4b69-8a7e-3f0cfe84d5b8/",
       "details": "Svelte Course",
       "teacherId": "d2aaeb00-5278-4765-a49a-bf7c8cc38c83",
-      "price": 1900000,
+      "price": 0,
       "duration": 18,
       "studentsCount": 70,
       "isSupport": true,
@@ -436,7 +450,7 @@
       "slug": "kubernetes",
       "description": "آموزش اورکستراسیون کانتینرها",
       "image": "https://ucarecdn.com/7a50fb61-9f4c-407a-976c-27fb18e7c2e5/",
-      "icon" : "https://ucarecdn.com/c099aaee-cc1b-4ba1-9b59-42d1ac98c00e/",
+      "icon": "https://ucarecdn.com/c099aaee-cc1b-4ba1-9b59-42d1ac98c00e/",
       "teacherId": "f5b26932-3cfc-4cb6-a88e-f3cb46091acb",
       "details": "Kubernetes Course",
       "price": 3600000,
