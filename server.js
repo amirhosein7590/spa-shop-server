@@ -287,28 +287,28 @@ server.post("/cart/remove", (req, res) => {
     return res.status(404).json({ error: "کاربر یافت نشد" });
   }
 
-  // اگر سبد خرید وجود نداشت یا خالی بود
   if (!user.cart || user.cart.length === 0) {
     return res.status(400).json({ error: "سبد خرید شما خالی است" });
   }
 
-  // بررسی آیا دوره در سبد خرید وجود دارد
   if (!user.cart.includes(courseId)) {
     return res.status(400).json({ error: "این دوره در سبد خرید شما وجود ندارد" });
   }
 
-  // حذف دوره از سبد خرید
+  // 1. حذف دوره از سبد خرید کاربر
   const updatedCart = user.cart.filter((id) => id !== courseId);
+  db.get("users").find({ id: userId }).assign({ cart: updatedCart }).write();
 
-  db.get("users")
-    .find({ id: userId })
-    .assign({ cart: updatedCart })
-    .write();
+  // 2. دریافت اطلاعات کامل دوره‌های باقیمانده از دیتابیس
+  const remainingCourses = updatedCart.map(id => 
+    db.get("courses").find({ id }).value()
+  ).filter(Boolean); // فیلتر کردن موارد null/undefined
 
+  // 3. ارسال پاسخ با جزئیات کامل
   res.json({
     success: true,
     message: "دوره از سبد خرید حذف شد",
-    cart: updatedCart,
+    cart: remainingCourses, // ارسال تمام اطلاعات دوره‌ها (شامل icon، قیمت و...)
   });
 });
 
@@ -361,8 +361,7 @@ server.post("/login", async (req, res) => {
       message: "ورود موفق",
       userId : account.id,
       role: account.role,
-      token,
-      purchasedCourses : account.purchasedCourses
+      token
     });
   } catch (err) {
     console.error("💥 Error during bcrypt.compare:", err);
@@ -504,9 +503,12 @@ server.post("/ban", (req, res) => {
 
 /**
  * @api {post} /purchase خرید دوره
+ * @apiHeader {String} Authorization توکن کاربر
+ * @apiBody {String[]} courseIds شناسه‌های دوره
  */
 server.post("/purchase", (req, res) => {
-  const { userId, courseIds } = req.body;
+  const { courseIds } = req.body;
+  const userId = req.user.userId; // دریافت از توکن به جای body
 
   if (!Array.isArray(courseIds)) {
     return res.status(400).json({ error: "courseIds باید آرایه باشد" });
@@ -519,18 +521,41 @@ server.post("/purchase", (req, res) => {
     return res.status(404).json({ error: "کاربر یافت نشد" });
   }
 
-  const updatedCourses = [...new Set([...user.purchasedCourses, ...courseIds])];
+  // بررسی وجود دوره‌ها در دیتابیس
+  const invalidCourses = courseIds.filter(
+    (id) => !db.get("courses").find({ id }).value()
+  );
+  
+  if (invalidCourses.length > 0) {
+    return res.status(404).json({
+      error: "برخی دوره‌ها یافت نشدند",
+      invalidCourses
+    });
+  }
 
+  // به‌روزرسانی لیست خریداری‌شده‌ها بدون تکرار
+  const updatedPurchased = [...new Set([...user.purchasedCourses, ...courseIds])];
+
+  // حذف دوره‌های خریداری‌شده از سبد خرید
+  const updatedCart = (user.cart || []).filter(id => !courseIds.includes(id));
+
+  // ثبت تغییرات
   db.get("users")
     .find({ id: userId })
-    .assign({ purchasedCourses: updatedCourses })
+    .assign({
+      purchasedCourses: updatedPurchased,
+      cart: updatedCart,
+    })
     .write();
 
   res.json({
     success: true,
-    purchasedCourses: updatedCourses,
+    purchasedCourses: updatedPurchased,
+    cart: updatedCart,
+    message: "خرید با موفقیت انجام شد",
   });
 });
+
 
 /**
  * @api {get} /teachers/:teacherId/courses دریافت دوره‌های یک معلم
@@ -562,9 +587,15 @@ server.get("/teachers/:teacherId/courses", (req, res) => {
 
 /**
  * @api {get} /user-courses دریافت دوره‌های کاربر
+ * @apiHeader {String} Authorization توکن کاربر
  */
 server.get("/user-courses/:userId", (req, res) => {
   const { userId } = req.params;
+
+  // بررسی اینکه کاربر فقط به دوره‌های خودش دسترسی داشته باشد
+  if (req.user.userId !== userId) {
+    return res.status(403).json({ error: "دسترسی غیرمجاز" });
+  }
 
   const db = router.db;
   const user = db.get("users").find({ id: userId }).value();
@@ -587,6 +618,7 @@ server.get("/user-courses/:userId", (req, res) => {
     courses,
   });
 });
+
 
 /**
  * @api {post} /offs/all اعمال تخفیف به همه دوره‌ها
